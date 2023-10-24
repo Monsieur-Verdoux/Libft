@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/23 18:51:48 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/23 18:52:04 by akovalev         ###   ########.fr       */
+/*   Created: 2023/10/24 18:43:01 by akovalev          #+#    #+#             */
+/*   Updated: 2023/10/24 19:20:44 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
+	unsigned char *str;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	str = (unsigned char *)s;
+
+	while (n--)
+		*str++ = '\0'; //another way to do it without the i counter
 }
 
-/*int	main(void)
+int main(void)
 {
-	char	c[]= "otter";
-
-	printf("%zu \n", ft_strlen(c));
-}*/
+	char	str[] = "string";
+	ft_bzero(str, 3);
+	//printf("%s", str);
+}
