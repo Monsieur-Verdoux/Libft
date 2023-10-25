@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 18:46:13 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/23 18:49:23 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/10/25 15:12:20 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-//#include <ctype.h>
+//#include <type.h>
 
 int	ft_isprint(int c)
 {

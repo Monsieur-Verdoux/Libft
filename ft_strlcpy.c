@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 18:43:01 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/25 16:36:10 by akovalev         ###   ########.fr       */
+/*   Created: 2023/10/25 15:37:19 by akovalev          #+#    #+#             */
+/*   Updated: 2023/10/25 17:38:10 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	unsigned char	*str;
+	size_t	copylen;
+	size_t	srclen;
 
-	str = (unsigned char *)s;
-	while (n--)
-		*str++ = '\0'; //another way to do it without the i counter
+	srclen = 0;
+	copylen = 0;
+	while (src[srclen] != '\0' && srclen < dstsize - 1)
+		srclen++;
+	while (copylen < srclen && copylen < dstsize - 1)
+	{
+		dst[copylen] = src[copylen];
+		copylen++;
+	}
+	dst[copylen] = '\0';
+	return (srclen);
 }
 
-/*int main(void)
+/*int	main(void)
 {
-	char	str[] = "string";
-	ft_bzero(str, 3);
-	//printf("%s", str);
 }*/

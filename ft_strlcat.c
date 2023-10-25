@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 18:43:01 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/25 16:36:10 by akovalev         ###   ########.fr       */
+/*   Created: 2023/10/25 16:37:53 by akovalev          #+#    #+#             */
+/*   Updated: 2023/10/25 19:14:38 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	unsigned char	*str;
+	size_t	dstlen;
+	size_t	srclen;
+	size_t	i;
 
-	str = (unsigned char *)s;
-	while (n--)
-		*str++ = '\0'; //another way to do it without the i counter
+	srclen = 0;
+	dstlen = 0;
+	i = 0;
+
+	while (src[srclen] != '\0')
+		srclen++;
+	while (dst[dstlen] != '\0' && dstlen < dstsize)
+		dstlen++;
+	while (i < dstsize - dstlen - 1 && src[i] != '\0')
+	{
+		dst[dstlen + i] = src[i];
+		i++;
+	}
+	return (dstlen + srclen);
 }
 
-/*int main(void)
-{
-	char	str[] = "string";
-	ft_bzero(str, 3);
-	//printf("%s", str);
-}*/

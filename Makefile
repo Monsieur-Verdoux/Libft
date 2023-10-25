@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+         #
+#    By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/18 15:40:30 by akovalev          #+#    #+#              #
-#    Updated: 2023/07/18 19:49:27 by akovalev         ###   ########.fr        #
+#    Updated: 2023/10/25 19:04:43 by akovalev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,12 @@ SRC = 	ft_isalnum.c \
 		ft_isdigit.c \
 		ft_isprint.c \
 		ft_strlen.c \
+		ft_bzero.c \
+		ft_memcpy.c \
+		ft_memmove.c \
+		ft_memset.c \
+		ft_strlcat.c \
+		ft_strlcpy.c \
 
 INCLUDES = libft.h
 
@@ -27,7 +33,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME) 
 
-$(OBJ): $(SRC)
+.o: .c
 	cc $(CFLAGS) -c $< -o $@ -I$(INCLUDES)
 
 $(NAME): $(OBJ)
