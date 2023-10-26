@@ -1,38 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 16:46:36 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/26 14:45:35 by akovalev         ###   ########.fr       */
+/*   Created: 2023/10/26 16:04:43 by akovalev          #+#    #+#             */
+/*   Updated: 2023/10/26 18:44:25 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t			i;
-	unsigned char	*str;
-	unsigned char	ch;
-
-	i = 0;
-	ch = (unsigned char)c;
-	str = (unsigned char *)b;
-	while (i < len)
+	while (*s != '\0')
 	{
-		str[i] = ch;
-		i++;
+		if (*s == c)
+			return ((char *)s);
+		s++;
 	}
-	return (b);
+	if (*s == c && c == '\0')
+		return ((char *)s);
+	return (NULL);
 }
+
 /*int	main(void)
 {
-	char	str[] = "string";
-	ft_memset(str, '$', 3);
+	char s[] = "learning is fun";
+	int c = '\0';
+	char *result = ft_strchr(s, c);
 
-	printf("%s", str); 
-
+ if (result != NULL)
+    {
+        printf("Character '%c' found at position: %ld\n", c, result - s);
+    }
+    else
+    {
+        printf("Character '%c' not found in the string.\n", c);
+    }
+	return (0);
 }*/

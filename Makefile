@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+         #
+#    By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/18 15:40:30 by akovalev          #+#    #+#              #
-#    Updated: 2023/10/25 19:04:43 by akovalev         ###   ########.fr        #
+#    Updated: 2023/10/26 19:48:20 by akovalev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,14 @@ SRC = 	ft_isalnum.c \
 		ft_memset.c \
 		ft_strlcat.c \
 		ft_strlcpy.c \
+		ft_toupper.c \
+		ft_tolower.c \
+		ft_strchr.c \
+		ft_strrchr.c \
+		ft_strncmp.c \
+		ft_memchr.c \
+		ft_memcmp.c \
+		ft_strnstr.c \
 
 INCLUDES = libft.h
 

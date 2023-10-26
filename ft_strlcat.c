@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 16:37:53 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/26 14:03:36 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/10/26 14:54:32 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,3 @@ int	main(void)
 		printf("The return values are not the same");
 	return (0);
 }*/
-

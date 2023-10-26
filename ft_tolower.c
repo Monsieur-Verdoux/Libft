@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 18:43:01 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/26 14:51:04 by akovalev         ###   ########.fr       */
+/*   Created: 2023/10/26 15:18:43 by akovalev          #+#    #+#             */
+/*   Updated: 2023/10/26 15:48:59 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_tolower(int c)
 {
-	unsigned char	*str;
+	unsigned char	ch;
 
-	str = (unsigned char *)s;
-	while (n--)
-		*str++ = '\0';
-		//another way to do it without the i counter
+	ch = (unsigned char)c;
+	if (65 <= ch && ch <= 90)
+		ch = ch + 32;
+	return (ch);
 }
 
-/*void	ft_bzero(void *s, size_t n)
+/*int main(void)
 {
-	ft_memset(s, '\0', n);
-}
+	int	c = 'A';
+	int	c1 = 'B';
 
-int main(void)
-{
-	char	str[] = "string";
-	ft_bzero(str, 3);
-	printf("%s", str);
+	printf("%d\n", ft_tolower(c));
+	printf("%d\n", tolower(c1));
 }*/
