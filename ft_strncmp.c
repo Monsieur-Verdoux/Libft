@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 17:50:35 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/26 19:43:05 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/10/27 14:21:13 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-	int 	j;
+	int		j;
 
 	i = 0;
 	j = 0;

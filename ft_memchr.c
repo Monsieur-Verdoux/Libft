@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:24:06 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/26 18:45:45 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/10/27 12:54:43 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	char s[] = "learning is fun";
 	int c = 'a';
 	char *result = ft_memchr(s, c, 30);
+	char *original = memchr(s, c, 30);
 
  if (result != NULL)
     {
@@ -43,5 +44,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
     {
         printf("Character '%c' not found in the string.\n", c);
     }
+
+	if (result == original)
+		printf("The return values are the same");
+	else
+		printf("The return values are not the same");
 	return (0);
+
 }*/

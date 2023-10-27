@@ -6,7 +6,7 @@
 #    By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/18 15:40:30 by akovalev          #+#    #+#              #
-#    Updated: 2023/10/26 19:48:20 by akovalev         ###   ########.fr        #
+#    Updated: 2023/10/27 14:32:25 by akovalev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,10 @@ SRC = 	ft_isalnum.c \
 		ft_memchr.c \
 		ft_memcmp.c \
 		ft_strnstr.c \
+		ft_atoi.c \
+		ft_strdup.c \
+		ft_calloc.c \
+		ft_substr.c \
 
 INCLUDES = libft.h
 

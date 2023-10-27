@@ -1,44 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 16:32:22 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/27 14:20:58 by akovalev         ###   ########.fr       */
+/*   Created: 2023/10/27 14:31:39 by akovalev          #+#    #+#             */
+/*   Updated: 2023/10/27 17:37:32 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
-{
-	const char	*s_end;
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 
-	s_end = s + ft_strlen(s);
-	while (s_end >= s)
+{
+	char	*sub;
+	size_t	i;
+
+	if (s == NULL)
+		return (NULL);
+
+	i = 0;
+	sub = (char *)malloc((len + 1) * sizeof(char));
+	if (start >= ft_strlen(s))
 	{
-		if (*s_end == c)
-			return ((char *)(s_end));
-		s_end--;
+		sub[0] = '\0';
+		return (sub);
 	}
-	return (NULL);
+	if (sub == NULL)
+		return (NULL);
+	while (len > i && s[start] != '\0')
+	{
+		sub[i] = s[start];
+		start++;
+		i++;
+	}
+	sub[i] = '\0';
+	return (sub);
 }
 
 /*int	main(void)
 {
-	char s[] = "learning is fun";
-	int c = '\0';
-	char *result = ft_strrchr(s, c);
+	char	string[] = "Plotter Otter";
 
- if (result != NULL)
-    {
-        printf("Character '%c' found at position: %ld\n", c, result - s);
-    }
-    else
-    {
-        printf("Character '%c' not found in the string.\n", c);
-    }
+	printf("Result: %s\n", ft_substr(string, 8, 5));
+
 	return (0);
 }*/
