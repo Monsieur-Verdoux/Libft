@@ -10,6 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*DESCRIPTION         top
+       isprint()
+              checks for any printable character including space.
+RETURN VALUE         top
+       The values returned are nonzero if the character c falls into the
+       tested class, and zero if not.*/
+
 //#include <stdio.h>
 //#include <type.h>
 

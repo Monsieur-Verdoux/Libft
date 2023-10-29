@@ -10,6 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*DESCRIPTION         
+     isalnum() checks for an alphanumeric character; it is equivalent to
+              (isalpha(c) || isdigit(c)).
+RETURN VALUE         
+       The isalnum() and isalnum_l() functions shall return non-zero if
+       c is an alphanumeric character; otherwise, they shall return 0.*/
+
 //#include <stdio.h>
 //#include <ctype.h>
 

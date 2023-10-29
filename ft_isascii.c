@@ -10,6 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*DESCRIPTION         top
+       isascii()
+              checks whether c is a 7-bit unsigned char value that fits
+              into the ASCII character set.
+RETURN VALUE         top
+       The values returned are nonzero if the character c falls into the
+       tested class, and zero if not.*/
+
 //#include <stdio.h>
 //#include <ctype.h>
 

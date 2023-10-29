@@ -10,6 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*DESCRIPTION         top
+       isalnum()
+              checks for an alphanumeric character; it is equivalent to
+              (isalpha(c) || isdigit(c)).
+RETURN VALUE         top
+       The values returned are nonzero if the character c falls into the
+       tested class, and zero if not.*/
+
 //#include <stdio.h>
 
 int	ft_isalpha(int c)

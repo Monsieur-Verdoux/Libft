@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*DESCRIPTION         top
+       The atoi() function converts the initial portion of the string
+       pointed to by nptr to int.  The behavior is the same as
+RETURN VALUE         top
+       The converted value or 0 on error.*/
+
 #include "libft.h"
 
 int	ft_atoi(const char *str)

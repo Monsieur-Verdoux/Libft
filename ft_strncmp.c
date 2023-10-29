@@ -10,6 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*DESCRIPTION         top
+
+	   The strncmp() function shall compare not more than n bytes (bytes
+       that follow a NUL character are not compared) from the array
+       pointed to by s1 to the array pointed to by s2.
+
+       The sign of a non-zero return value is determined by the sign of
+       the difference between the values of the first pair of bytes
+       (both interpreted as type unsigned char) that differ in the
+       strings being compared.
+RETURN VALUE         top
+       Upon successful completion, strncmp() shall return an integer
+       greater than, equal to, or less than 0, if the possibly null-
+       terminated array pointed to by s1 is greater than, equal to, or
+       less than the possibly null-terminated array pointed to by s2
+       respectively.*/
+
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
