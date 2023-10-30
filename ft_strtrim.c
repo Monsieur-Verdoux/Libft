@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 11:30:04 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/30 13:00:00 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/10/30 13:28:11 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,20 +37,11 @@ int	is_separator(char c, char const *charset)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*handle_temp(char *temp, char const *s1, char const *set, int len)
 {
-	char	*strim;
-	char	*temp;
-	int		len;
 	int		i;
 	int		j;
 
-	if (s1 == NULL || set == NULL)
-		return (NULL);
-	len = ft_strlen(s1);
-	temp = (char *)malloc(ft_strlen(s1) + 1);
-	if (temp == NULL)
-		return (NULL);
 	i = 0;
 	j = 0;
 	while (s1[i] != '\0' && (is_separator(s1[i], set)))
@@ -65,6 +56,23 @@ char	*ft_strtrim(char const *s1, char const *set)
 		j++;
 	}
 	temp[j] = '\0';
+	return (temp);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char	*strim;
+	char	*temp;
+	int		len;
+	int		i;
+
+	if (s1 == NULL || set == NULL)
+		return (NULL);
+	len = ft_strlen(s1);
+	temp = (char *)malloc(len + 1);
+	if (temp == NULL)
+		return (NULL);
+	handle_temp(temp, s1, set, len);
 	strim = (char *)malloc(ft_strlen(temp) + 1);
 	if (strim == NULL)
 		return (NULL);
@@ -75,11 +83,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	}
 	strim[i] = '\0';
-	free(temp);
 	return (strim);
 }
-
-/*int main(void)
+	//free(temp);
+/*
+int main(void)
 {
 	char s1[] = "123Otter2Potter345";
 	char set[] = "12345";
@@ -88,53 +96,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 	printf("result is: %s\n", result);
 	free(result);
 	return (0);
-}*/
-
-/*int    is_separator(char c, char const *charset)
-{
-    while (*charset)
-    {
-        if (*charset == c)
-        {
-            return (1);
-        }
-        charset++;
-    }
-    return (0);
 }
-
-
-char    *ft_strtrim(char const *s1, char const *set)
-{
-    char    *strim;
-    char    *temp;
-    int    len;
-    int    i;
-    int    j;
-
-    len = ft_strlen(s1);
-    temp = (char *)malloc(ft_strlen(s1) + 1);
-    i = 0;
-    j = 0;
-    while (s1[i] != '\0' && (is_separator(s1[i], set)))
-        i++;
-    len--;
-    while (len > 0 && (is_separator(s1[len], set)))
-        len--;
-    while (i <= len)
-    {
-        temp[j] = s1[i];
-        i++;
-        j++;
-    }
-    temp[j] = '\0';
-    strim = (char *)malloc(ft_strlen(temp) + 1);
-    i = 0;
-    while (temp[i] != '\0')
-    {
-        strim[i] = temp[i];
-        i++;
-    }
-    strim[i] = '\0';
-    return (strim);    
-}*/
+*/
