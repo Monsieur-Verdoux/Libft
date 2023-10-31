@@ -6,7 +6,7 @@
 #    By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/18 15:40:30 by akovalev          #+#    #+#              #
-#    Updated: 2023/10/31 11:18:45 by akovalev         ###   ########.fr        #
+#    Updated: 2023/10/31 13:21:43 by akovalev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,11 @@ SRC = 	ft_isalnum.c \
 		ft_split.c \
 		ft_itoa.c \
 		ft_strmapi.c \
+		ft_striteri.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
 
 INCLUDES = libft.h
 
