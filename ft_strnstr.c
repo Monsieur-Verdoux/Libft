@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 19:47:42 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/27 17:24:28 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/10/31 16:33:16 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (needle[0] == '\0' || len == 0)
+	if (needle[0] == '\0')
 		return ((char *)haystack);
 	while (haystack[i] != '\0' && i < len)
 	{
@@ -67,4 +67,7 @@ it tries to access needle[0] without verifying that needle is a valid pointer,
 but if you actually wanted it to not segfault, the check should be 
 	if (needle == NULL || len == 0)
         return (char *)haystack;
+
+also: removed check for len being == 0 because the original 
+function also returns NULL in that case
 */

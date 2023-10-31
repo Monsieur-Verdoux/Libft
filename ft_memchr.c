@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:24:06 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/27 12:54:43 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/10/31 17:35:06 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,24 +28,21 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*ptr;
 
 	ptr = (unsigned char *)s;
-	while (*ptr != '\0' && n > 0)
+	while (n > 0)
 	{
 		if (*ptr == (unsigned char)c)
 			return (ptr);
 		ptr++;
 		n--;
 	}
-	if (*ptr == c && c == '\0')
-		return (ptr);
 	return (NULL);
 }
-
 /*int	main(void)
 {
 	char s[] = "learning is fun";
-	int c = 'a';
-	char *result = ft_memchr(s, c, 30);
-	char *original = memchr(s, c, 30);
+	int c = 'z';
+	char *result = ft_memchr(s, c, 3000);
+	char *original = memchr(s, c, 3000);
 
  if (result != NULL)
     {
@@ -62,4 +59,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		printf("The return values are not the same");
 	return (0);
 
-}*/
+}
+note: had to remove the check for the string ending wiht '\0', so the
+search actually can continue way beyond the boundaries of s if n is large
+enough. Example: Character 'z' found at position: 768 for the test above */

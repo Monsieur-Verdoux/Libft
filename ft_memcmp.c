@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:46:35 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/27 14:20:36 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/10/31 15:57:56 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	size_t			i;
 	int				j;
 
+	if (n == 0)
+		return (0);
 	s1ptr = (unsigned char *)s1;
 	s2ptr = (unsigned char *)s2;
 	j = 0;

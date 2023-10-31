@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:32:22 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/27 14:20:58 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/10/31 17:13:13 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strrchr(const char *s, int c)
 	s_end = s + ft_strlen(s);
 	while (s_end >= s)
 	{
-		if (*s_end == c)
+		if (*s_end == (char)c)
 			return ((char *)(s_end));
 		s_end--;
 	}
@@ -55,4 +55,6 @@ char	*ft_strrchr(const char *s, int c)
         printf("Character '%c' not found in the string.\n", c);
     }
 	return (0);
-}*/
+}
+note: if (*s_end == (char)c) casting to char here, same as strchr
+*/
