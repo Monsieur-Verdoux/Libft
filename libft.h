@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 11:47:43 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/31 13:21:20 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/01 14:59:48 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdio.h>
 # include <string.h>
 # include <ctype.h>
+# include <limits.h>
 
 int		ft_isalnum(int c);
 size_t	ft_strlen(const char *s);

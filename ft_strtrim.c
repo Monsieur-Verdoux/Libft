@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 11:30:04 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/01 11:37:21 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/01 14:37:06 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,56 +37,46 @@ int	is_separator(char c, char const *charset)
 	return (0);
 }
 
-char	*handle_temp(char *temp, char const *s1, char const *set, int len)
+char	*ft_strtrim(char const *s1, char const *set)
 {
+	int		len;
+	char	*strim;
 	int		i;
 	int		j;
+	int		new_len;
 
+	if (s1 == NULL || set == NULL)
+		return (NULL);
+	len = ft_strlen(s1) - 1;
 	i = 0;
 	j = 0;
 	while (s1[i] != '\0' && (is_separator(s1[i], set)))
 		i++;
-	len--;
 	while (len > 0 && (is_separator(s1[len], set)))
 		len--;
-	while (i <= len)
-	{
-		temp[j] = s1[i];
-		i++;
-		j++;
-	}
-	temp[j] = '\0';
-	return (temp);
-}
-
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	char	*strim;
-	char	*temp;
-	int		len;
-	int		i;
-
-	if (s1 == NULL || set == NULL)
-		return (NULL);
-	len = ft_strlen(s1);
-	temp = (char *)malloc(len + 1);
-	if (temp == NULL)
-		return (NULL);
-	handle_temp(temp, s1, set, len);
-	strim = (char *)malloc(ft_strlen(temp) + 1);
+	new_len = len - i + 1;
+	if (new_len < 0)
+		new_len = 0;
+	strim = (char *)malloc(new_len + 1);
 	if (strim == NULL)
 		return (NULL);
-	i = 0;
-	while (temp[i] != '\0')
-	{
-		strim[i] = temp[i];
-		i++;
-	}
-	strim[i] = '\0';
+	while (i <= len)
+		strim[j++] = s1[i++];
+	strim[j] = '\0';
 	return (strim);
 }
-	//free(temp);
-/*
+
+/*int main(void)
+{
+    char s1[] = "  \t \t \n   \n\n\n\t";
+    char set[] = "";
+    char *result = ft_strtrim(s1, set);
+
+    printf("result is: %s\n", result);
+    free(result);
+    return (0);
+}
+
 int main(void)
 {
 	char s1[] = "123Otter2Potter345";
@@ -97,4 +87,7 @@ int main(void)
 	free(result);
 	return (0);
 }
+
+note: new_len calculation needs to handle the case when set 
+is an empty string. check if new_len is negative and = 0.  
 */
