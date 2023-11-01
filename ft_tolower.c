@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 15:18:43 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/31 17:10:30 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/01 16:53:45 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,16 @@ RETURN VALUE         top
 
 int	ft_tolower(int c)
 {
+	if (c >= 0 && c <= 255)
+	{
+		if (65 <= c && c <= 90)
+			c = c + 32;
+	}
+	return (c);
+}
+
+/*int	ft_tolower(int c)
+{
 	unsigned char	ch;
 
 	if (c == EOF)
@@ -50,7 +60,7 @@ int	ft_tolower(int c)
 	return (ch);
 }
 
-/*int main(void)
+int main(void)
 {
 	int	c = 'A';
 	int	c1 = 'B';
