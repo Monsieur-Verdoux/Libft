@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 16:37:53 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/31 11:13:34 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/01 10:55:07 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@
               null-terminated).  They return the length of the total
               string they tried to create.  These functions force a
               SIGSEGV if the src pointer is not a string.
+
+			  strlcat() appends string src to the end of dst.  It will append at most
+     dstsize - strlen(dst) - 1 characters.  It will then NUL-terminate, unless
+     dstsize is 0 or the original dst string was longer than dstsize (in prac-
+     tice this should not happen as it means that either dstsize is incorrect
+     or that dst is not a proper string).
 	RETURN VALUE         top
 			   The following functions return the length of the total string
        that they tried to create (as if truncation didn't occur).*/

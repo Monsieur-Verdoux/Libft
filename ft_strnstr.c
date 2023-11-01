@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 19:47:42 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/31 16:33:16 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/01 11:51:22 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	i = 0;
+	if (haystack == NULL && len == 0)
+		return (NULL);
 	if (needle[0] == '\0')
 		return ((char *)haystack);
 	while (haystack[i] != '\0' && i < len)
@@ -48,7 +50,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
-/*int main(void)
+/*int	main(void)
+{
+	//printf("our result: %s\n", ft_strnstr(((void *)0), "fake", 4));
+	printf("result: %s\n", strnstr(((void *)0), "fake", 4));
+}
+
+int main(void)
 {
 	char needle[] = "otter";
 	char haystack[] = "pottsmotters";
