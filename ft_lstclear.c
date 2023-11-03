@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:24:54 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/03 17:27:41 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/03 19:18:59 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ NULL.*/
 
 #include "libft.h"
 
+
+
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
@@ -44,3 +46,41 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = NULL;
 	}
 }
+
+/*void del(void *content)
+{
+	if (content)
+		free(content);
+}
+
+void	printlist(t_list *lst)
+{
+	while (lst)
+	{
+		printf("value: %d\n", *((int *)lst->content));
+		lst = lst->next;
+	}
+}
+
+int	main(void)
+{
+	t_list	*head = NULL;
+	t_list	*tmp;
+	int		i;
+	int		*value;
+
+	i = 0;
+	while (i <= 5)
+	{
+		value = malloc(sizeof(int));
+		*value = i;
+		tmp = ft_lstnew(value);
+		tmp->next = head;
+		head = tmp;
+		i++;
+	}
+	printlist(head);
+	printf("\nafter the freeing: \n\n");
+	ft_lstclear(&head, del);
+	printlist(head);
+}*/

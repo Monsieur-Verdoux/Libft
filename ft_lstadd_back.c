@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 12:53:55 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/03 13:16:57 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/03 19:08:30 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,45 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		}
 	}
 }
+
+/*void	printlist(t_list *lst)
+{
+	while (lst)
+	{
+		printf("value: %d\n", *((int *)lst->content));
+		lst = lst->next;
+	}
+}
+
+int	main(void)
+{
+	t_list	*head = NULL;
+	t_list	*tmp;
+	int		i;
+	int		*value;
+
+	i = 0;
+	while (i <= 5)
+	{
+		value = malloc(sizeof(int));
+		*value = i;
+		tmp = ft_lstnew(value);
+		tmp->next = head;
+		head = tmp;
+		i++;
+	}
+	printlist(head);
+	printf("\nafter the addition: \n\n");
+	value = malloc(sizeof(int));
+	*value = -1;
+	tmp = ft_lstnew(value);
+	ft_lstadd_back(&head, tmp);
+	printlist(head);
+	while (head)
+	{
+		t_list *next = head->next;
+		free(head->content);
+		free(head); 
+		head = next;
+	}	
+}*/
