@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:25:03 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/01 19:27:41 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/03 12:03:20 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ char	**split_subs(const char *s, char c, int len, char **result)
 {
 	int	i;
 	int	j;
-	int	sub_len;
 	int	start;
 	int	sep_or_end;
 
@@ -82,9 +81,10 @@ char	**split_subs(const char *s, char c, int len, char **result)
 		sep_or_end = (is_sep(s[i], c) || i == len);
 		if (sep_or_end && i > start)
 		{
-			sub_len = i - start;
-			result[j] = (char *)malloc(sub_len + 1);
-			copy_subs(&s[start], result[j], sub_len);
+			result[j] = (char *)malloc(i - start + 1);
+			if (result[j] == NULL)
+				return (NULL);
+			copy_subs(&s[start], result[j], i - start);
 			j++;
 		}
 		if (sep_or_end)
@@ -111,7 +111,8 @@ char	**ft_split(char const *s, char c)
 	return (split_subs(s, c, len, result));
 }
 
-/*int	main(void) 
+/*
+int	main(void) 
 {
 	char str[] = "123Otter2Potter345";
 	char sep = '2';

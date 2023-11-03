@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 11:30:04 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/01 14:37:06 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/03 18:35:35 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,6 @@ int main(void)
 	return (0);
 }
 
-note: new_len calculation needs to handle the case when set 
-is an empty string. check if new_len is negative and = 0.  
+note: new_len calculation needs to handle the case when set is " "
+and s1 is "      ". check if new_len is negative and = 0.  
 */

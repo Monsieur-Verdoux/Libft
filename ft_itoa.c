@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:59:15 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/30 19:45:11 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/03 12:07:45 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*handle_string(char *str, int len, int is_negative, int n)
 	while (len > 0)
 	{
 		str[len + is_negative - 1] = (n % 10) + '0';
-		n /= 10;
+		n = n / 10;
 		len--;
 	}
 	return (str);

@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 11:50:57 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/30 13:42:35 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/03 16:46:41 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char		*last_dst;
 	const unsigned char	*last_src;
 
-	if (dst == NULL & src == NULL)
+	if (dst == NULL && src == NULL)
 		return (NULL);
 	pdst = (unsigned char *)dst;
 	psrc = (unsigned char *)src;
