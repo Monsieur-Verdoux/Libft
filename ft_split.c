@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:25:03 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 13:55:39 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 18:52:30 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,88 +25,71 @@ with a NULL pointer.*/
 
 #include "libft.h"
 
-static int	is_sep(char c, char sep)
+static void	skip_sep(char const **s, char sep)
 {
-	if (c == sep)
-		return (1);
-	return (0);
+	while (**s && **s == sep)
+		(*s)++;
 }
 
 static int	count_subs(char const *s, char sep)
 {
 	int		count;
-	int		in_subs;
 
-	count = 0;
-	in_subs = 0;
+	if (s == NULL)
+		return (0);
+	count = 1;
 	while (*s)
 	{
-		if (is_sep(*s, sep))
-			in_subs = 0;
-		else if (!in_subs)
+		if (*s == sep)
 		{
-			in_subs = 1;
-			count++;
+			skip_sep(&s, sep);
+			if (*s)
+				count++;
 		}
-		s++;
+		else
+			s++;
 	}
 	return (count);
 }
 
-static void	copy_subs(const char *src, char *dest, int len)
+static char	**free_all(char **result)
 {
 	int	i;
 
 	i = 0;
-	while (i < len)
+	while (result[i])
 	{
-		dest[i] = src[i];
+		free(result[i]);
 		i++;
 	}
-	dest[len] = '\0';
-}
-
-static char	**split_subs(const char *s, char c, int len, char **result)
-{
-	int	i;
-	int	j;
-	int	start;
-	int	sep_or_end;
-
-	i = 0;
-	j = 0;
-	start = 0;
-	while (i <= len)
-	{
-		sep_or_end = (is_sep(s[i], c) || i == len);
-		if (sep_or_end && i > start)
-		{
-			result[j] = (char *)malloc(i - start + 1);
-			if (result[j] == NULL)
-				return (NULL);
-			copy_subs(&s[start], result[j], i - start);
-			j++;
-		}
-		if (sep_or_end)
-			start = i + 1;
-		i++;
-	}
-	result[j] = NULL;
-	return (result);
+	free(result);
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int		len;
-	int		num_subs;
 	char	**result;
+	int		i;
 
 	if (s == NULL)
 		return (NULL);
-	len = ft_strlen(s);
-	num_subs = count_subs(s, c);
-	result = (char **)malloc((num_subs + 1) * sizeof(char *));
-	if (!result)
+	skip_sep(&s, c);
+	result = ft_calloc((count_subs(s, c) + 1), sizeof(char *));
+	if (result == NULL)
 		return (NULL);
-	return (split_subs(s, c, len, result));
+	i = 0;
+	while (*s)
+	{
+		len = 0;
+		while (s[len] && s[len] != c)
+			len++;
+		result[i] = ft_substr(s, 0, len);
+		if (result[i] == NULL)
+			return (free_all(result));
+		i++;
+		s = s + len;
+		skip_sep(&s, c);
+	}
+	return (result);
 }

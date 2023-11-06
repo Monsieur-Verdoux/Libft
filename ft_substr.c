@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 14:31:39 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 14:04:24 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 18:54:14 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ maximum size ’len’.
 */
 
 #include "libft.h"
-#include <stddef.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
