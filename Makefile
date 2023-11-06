@@ -6,7 +6,7 @@
 #    By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/18 15:40:30 by akovalev          #+#    #+#              #
-#    Updated: 2023/11/06 14:38:48 by akovalev         ###   ########.fr        #
+#    Updated: 2023/11/06 15:23:25 by akovalev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,8 +45,6 @@ SRC = 	ft_isalnum.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
 
-INCLUDES = libft.h
-
 NAME = libft.a
 
 OBJ = $(SRC:.c=.o)
@@ -68,10 +66,10 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME) 
 
 .o: .c
-	cc $(CFLAGS) -c $< -o $@ -I$(INCLUDES)
+	cc $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
-	ar -rs $(NAME) $(OBJ)
+	ar -crs $(NAME) $(OBJ)
 
 clean:
 	rm -f $(OBJ) $(BONUS_OBJ)
@@ -81,7 +79,7 @@ fclean:	clean
 
 re: fclean all
 
-bonus: $(OBJ) $(BONUS_OBJ)
-	ar -rus $(NAME) $(OBJ) $(BONUS_OBJ)
+bonus: $(BONUS_OBJ)
+	ar -rus $(NAME) $(BONUS_OBJ)
 
 .PHONY: clean fclean all re bonus

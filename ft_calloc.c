@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:52 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 12:10:25 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 15:44:53 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,33 @@ RETURN VALUE         top
 
 #include "libft.h"
 
+/*void	*ft_calloc(size_t count, size_t size)
+{
+	void	*p;
+	size_t	max_size;
+
+	max_size = 4611686014132420608;
+	if (count == 0 || size == 0)
+		return (ft_calloc(1, 1));
+	if (count != 0 && max_size / count < size)
+		return ((void *)0);
+	p = (void *)malloc(count * size * sizeof(void));
+	if (!p)
+		return ((void *)0);
+	ft_bzero(p, count * size);
+	return (p);
+}*/
+
 void	*ft_calloc(size_t count, size_t size)
 {
 	char	*ptr;
 	size_t	i;
+	size_t	max;
 
-	//if (((int)count < 0 && size != 0) || ((int)size < 0 && (int)count > 0))
-	//	return (NULL);
-	//if ((int)count >= INT_MAX || (int)count <= INT_MIN || (int)size >= INT_MAX \
-	//|| (int)size <= INT_MIN || count >= SIZE_MAX || size >= SIZE_MAX)
-	//	return (NULL);
-	if (count != 0 && count * size / count != size)
+	max = 4611686014132420608;
+	if (count == 0 || size == 0)
+		return (ft_calloc(1, 1));
+	if (count != 0 && max / count < size)
 		return (NULL);
 	i = 0;
 	ptr = malloc(count * size);
