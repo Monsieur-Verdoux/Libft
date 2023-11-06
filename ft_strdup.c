@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 11:46:33 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/27 11:58:25 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:17:28 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,19 +40,3 @@ char	*ft_strdup(const char *s1)
 	}
 	return (ptr);
 }
-
-/*int	main(void)
-{
-	char string[] = "Otter";
-
-	char *ours = ft_strdup(string);
-    char *actual = strdup(string);
-
-	printf("Ours: %s\n", ours);
-	printf("Actual: %s\n", actual);
-
-	free(ours);
-	free(actual);
-	
-	return(0);
-}*/

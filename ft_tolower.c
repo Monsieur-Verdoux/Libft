@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 15:18:43 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/01 16:53:45 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:01:08 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ RETURN VALUE         top
        The value returned is that of the converted letter, or c if the
        conversion was not possible.*/
 
-#include "libft.h"
-
 int	ft_tolower(int c)
 {
 	if (c >= 0 && c <= 255)
@@ -47,28 +45,3 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
-
-/*int	ft_tolower(int c)
-{
-	unsigned char	ch;
-
-	if (c == EOF)
-		return (EOF);
-	ch = (unsigned char)c;
-	if (65 <= ch && ch <= 90)
-		ch = ch + 32;
-	return (ch);
-}
-
-int main(void)
-{
-	int	c = 'A';
-	int	c1 = 'B';
-
-	printf("%d\n", ft_tolower(c));
-	printf("%d\n", tolower(c1));
-}
-note: the EOF macro is often defined as -1, 
-and when you cast -1 to an unsigned char, it becomes 255
-ft_tolower(EOF): std: -1, yours: 255
-*/

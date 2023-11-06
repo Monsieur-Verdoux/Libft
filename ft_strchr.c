@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:04:43 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/31 16:59:49 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:36:28 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,34 +37,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
-
-/*int	main(void)
-{
-	char s[] = "learning is fun";
-	int c = '\0';
-	char *result = ft_strchr(s, c);
-
- if (result != NULL)
-    {
-        printf("Character '%c' found at position: %ld\n", c, result - s);
-    }
-    else
-    {
-        printf("Character '%c' not found in the string.\n", c);
-    }
-	return (0);
-}
-note: it failed 
-res = single_test_strchr(5, "teste", 'e' + 256) && res;
-	res = single_test_strchr(6, "teste", 1024) && res;
-because c is an int with a value outside the valid range of a char.
-
-When you use an int as c and compare it directly to a char 
-(as is done in the code), you are potentially working with different 
-data types, and this can lead to issues, especially if the int value 
-is outside the valid range for a char.
-If you have an int with a value greater than 255 (outside the char range, 
-which is -128 to 127 or 0 to 255 for unsigned),
- the conversion to char ensures that the value is treated as a valid ASCII
- value within the char range.
-*/

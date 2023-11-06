@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 12:06:31 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/02 12:10:44 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:57:36 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,6 @@ to be modified if necessary*/
 
 #include "libft.h"
 
-/*void	nextchar(unsigned int i, char *c)
-{
-	(void)i;
-	(*c)++;
-}*/
-
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
@@ -47,12 +41,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 	return ;
 }
-
-/*int	main(void)
-{
-	char	s[] = "abcde";
-	
-	ft_striteri(s, nextchar);
-	printf("result is: %s\n", s);
-	return (0);
-}*/

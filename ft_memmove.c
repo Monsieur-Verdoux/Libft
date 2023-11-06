@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 11:50:57 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/03 16:46:41 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:32:22 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,42 +44,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
-/*int	main(void)
-
-{
-	int	source[20] = {1, 2, 3, 4, 5};
-	int destination[5];
-	int destination2[5];
-
-	for (int i = 0; i < 5; i++)
-	{
-		printf("destination[%d] = %d\n", i, destination[i]);
-	}
-
-	for (int i = 0; i < 5; i++)
-	{
-		printf("destination2[%d] = %d\n", i, destination2[i]);
-	}
-
-	//ft_memmove(source+1, source, sizeof(int)*5);
-	memmove(source+3, source, sizeof(int)*5);
-
-	for (int i = 0; i < 5; i++)
-	{
-		printf("destination[%d] = %d\n", i, source[i]);
-	}
-	return(0);
-}
-
-		for (int i = 0; i < 5; i++)
-	{
-		printf("destination2[%d] = %d\n", i, destination2[i]);
-	}	
-int main()  
-{  
-char csrc[100] = "Geeksfor";  
-printf("%s", ft_memmove(csrc+5, csrc, strlen(csrc)+1));  
-return 0;  
-}
-*/

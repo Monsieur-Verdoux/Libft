@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 19:47:42 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/01 11:51:22 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:17:57 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,33 +49,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
-/*int	main(void)
-{
-	//printf("our result: %s\n", ft_strnstr(((void *)0), "fake", 4));
-	printf("result: %s\n", strnstr(((void *)0), "fake", 4));
-}
-
-int main(void)
-{
-	char needle[] = "otter";
-	char haystack[] = "pottsmotters";
-	char *result;
-	char *ourresult;
-
-	ourresult = ft_strnstr(haystack, needle, 12);
-	result = strnstr(haystack, needle, 12);
-
-	printf("%s \n%s \n", haystack, ourresult);
-	printf("%s \n%s \n", haystack, result);
-}
-
-note: this function segfaults on purpose when you pass NULL as needle because 
-it tries to access needle[0] without verifying that needle is a valid pointer, 
-but if you actually wanted it to not segfault, the check should be 
-	if (needle == NULL || len == 0)
-        return (char *)haystack;
-
-also: removed check for len being == 0 because the original 
-function also returns NULL in that case
-*/

@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 13:34:39 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/02 15:24:54 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:20:52 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,41 +34,3 @@ t_list	*ft_lstnew(void *content)
 	new_node->next = NULL;
 	return (new_node);
 }
-
-/*void	printlist(t_list *head)
-{
-	t_list	*temp = head;
-
-	while (temp != NULL)
-	{
-		printf("value: %d\n", *((int *)temp->content));
-		temp = temp->next;
-	}
-}
-
-int	main(void)
-{
-	t_list	*head = NULL;
-	t_list	*tmp;
-	int		i;
-	int		*value;
-
-	i = 0;
-	while (i <= 5)
-	{
-		value = malloc(sizeof(int));
-		*value = i;
-		tmp = ft_lstnew(value);
-		tmp->next = head;
-		head = tmp;
-		i++;
-	}
-	printlist(head);
-	while (head)
-	{
-		t_list *next = head->next;
-		free(head->content);
-		free(head); 
-		head = next;
-	}
-}*/

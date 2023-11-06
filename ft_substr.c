@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 14:31:39 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/31 18:46:51 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:04:24 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ maximum size ’len’.
 */
 
 #include "libft.h"
+#include <stddef.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -57,15 +58,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[i] = '\0';
 	return (sub);
 }
-
-/*int	main(void)
-{
-	char	string[] = "Plotter Otter";
-
-	printf("Result: %s\n", ft_substr(string, 8, 5));
-
-	return (0);
-}
-note: The tests "ft_substr("hola", 4294967295, 18446744073709551615)"
- represent extremely large start and length values, which could 
- lead to integer overflow issues.*/

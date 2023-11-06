@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 11:47:43 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/03 16:54:33 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:17:23 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-
-# include <stdio.h>
-# include <string.h>
-# include <ctype.h>
-# include <limits.h>
 
 typedef struct s_list
 {

@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 16:46:36 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/26 14:45:35 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:49:02 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-/*int	main(void)
-{
-	char	str[] = "string";
-	ft_memset(str, '$', 3);
-
-	printf("%s", str); 
-
-}*/

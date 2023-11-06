@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:46:35 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/31 15:57:56 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:08:16 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,19 +47,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	j = s1ptr[i] - s2ptr[i];
 	return (j);
 }
-
-/*int	main(void)
-{
-	char    string1[] = "great";
-    char    string2[] = "greet";
-	size_t number = 6;
-    int result;
-	int check;
-    
-  result = ft_memcmp(string1, string2, number);
-  check = memcmp(string1, string2, number);
-  
-  printf("result is: %d\ncheck is: %d\n", result, check);
-  
-  return 0;
-}*/

@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 16:44:40 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/30 13:42:53 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:31:22 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,35 +39,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-/*int main(void)
-{
-//	char test[20] = "Learning";
-//	char test2[20] = "Learning";
-
-	void *src = NULL;
-	void *dst = NULL;
-	size_t n = 0;
-
-	memcpy(dst, src, n);
-	ft_memcpy(dst, src, n);
-
-	//ft_memcpy(test+8, test, sizeof(char)*3);
-	//memcpy(test2+8, test2, sizeof(char)*3);
-	//printf("test after move is %s\n", test);
-	//printf("test2 after move is %s\n", test2);
-	return(0);
-}*/
-/*int	main(void)
-{
-	int	source[] = {1, 2, 3, 4, 5};
-	int destination[5];
-
-	ft_memcpy(destination, source, sizeof(int)*2);
-
-	for (int i = 0; i < 5; i++)
-	{
-		printf("destination[%d] = %d\n", i, destination[i]);
-	}
-	return(0);
-}*/

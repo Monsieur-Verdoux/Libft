@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:18:01 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/02 12:10:47 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:18:10 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,6 @@ to create a new string (with malloc(3)) resulting
 from successive applications of ’f’.*/
 
 #include "libft.h"
-
-/*char	nextchar(unsigned int i, char c)
-{
-	(void)i;
-	c = c + 1;
-	return (c);
-}*/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -55,11 +48,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	newstr[i] = '\0';
 	return (newstr);
 }
-
-/*int	main(void)
-{
-	char	*s = "abcde";
-	
-	printf("result is: %s\n", ft_strmapi(s, nextchar));
-	return (0);
-}*/

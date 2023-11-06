@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 17:50:35 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/27 14:21:13 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:39:01 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,37 +48,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (j);
 }
-
-/*int	main(void)
-{
-	int	ft;
-	int	orginal;
-
-	ft = ft_strncmp("Aima", "Nima", 10);
-	orginal = strncmp("Aima", "Nima", 10);
-	printf("*** ft results ********\n");
-	printf("%d\n", ft);
-	printf("*** orginal results ***\n");
-	printf("%d\n", orginal);
-	if (ft == orginal)
-		printf("The return values are the same");
-	else
-		printf("The return values are not the same");
-	return (0);
-}*/
-
-/*int	main(void)
-{
-	char    string1[] = "gree";
-    char    string2[] = "greet";
-	size_t number = 39;
-    int result;
-	int check;
-    
-  result = ft_strncmp(string1, string2, number);
-  check = strncmp(string1, string2, number);
-  
-  printf("result is: %d\ncheck is: %d\n", result, check);
-  
-  return 0;
-}*/

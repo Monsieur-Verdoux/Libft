@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 18:51:48 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/26 14:45:37 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:29:20 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-
-/*int	main(void)
-{
-	char	c[]= "otter";
-
-	printf("%zu \n", ft_strlen(c));
-}*/

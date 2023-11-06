@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 15:04:03 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/01 16:53:46 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:01:03 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ RETURN VALUE         top
        The value returned is that of the converted letter, or c if the
        conversion was not possible.*/
 
-#include "libft.h"
-
 int	ft_toupper(int c)
 {
 	if (c >= 0 && c <= 255)
@@ -47,12 +45,3 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
-
-/*int main(void)
-{
-	int	c = 'a';
-	int	c1 = 'b';
-
-	printf("%d\n", ft_toupper(c));
-	printf("%d\n", toupper(c1));
-}*/

@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 11:11:26 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/27 14:22:02 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:24:41 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,11 @@
 RETURN VALUE         top
        The converted value or 0 on error.*/
 
-#include "libft.h"
-
-int	ft_atoi(const char *str)
+static int	atoi_putnbr(const char *str, int sign, int i)
 {
-	int	result;
-	int	i;
-	int	sign;
+	long	result;
 
-	i = 0;
 	result = 0;
-	sign = 1;
-	while ((str[i] == '\t') || (str[i] == '\n') || (str[i] == '\v')
-		|| (str[i] == '\f') || (str[i] == '\r') || (str[i] == ' '))
-		i++;
 	if (str[i] == '-')
 	{
 		sign = -1;
@@ -40,15 +31,24 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		result = (result * 10) + (str[i] - '0');
+		if (result < 0 && sign == 1)
+			return (-1);
+		else if (result < 0 && sign == -1)
+			return (0);
 		i++;
 	}
-	result = result * sign;
-	return (result);
+	return (sign * (int)result);
 }
-/*int	main(void)
+
+int	ft_atoi(const char *str)
 {
+	int		i;
+	int		sign;
 
-	printf("atoi result is %d\n", atoi("     -+234"));
-	printf("our result is %d\n", ft_atoi("     -+234"));
-
-}*/
+	i = 0;
+	sign = 1;
+	while ((str[i] == '\t') || (str[i] == '\n') || (str[i] == '\v')
+		|| (str[i] == '\f') || (str[i] == '\r') || (str[i] == ' '))
+		i++;
+	return (atoi_putnbr(str, sign, i));
+}

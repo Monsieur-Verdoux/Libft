@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:25:03 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/03 12:03:20 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:55:39 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ with a NULL pointer.*/
 
 #include "libft.h"
 
-int	is_sep(char c, char sep)
+static int	is_sep(char c, char sep)
 {
 	if (c == sep)
 		return (1);
 	return (0);
 }
 
-int	count_subs(char const *s, char sep)
+static int	count_subs(char const *s, char sep)
 {
 	int		count;
 	int		in_subs;
@@ -53,7 +53,7 @@ int	count_subs(char const *s, char sep)
 	return (count);
 }
 
-void	copy_subs(const char *src, char *dest, int len)
+static void	copy_subs(const char *src, char *dest, int len)
 {
 	int	i;
 
@@ -66,7 +66,7 @@ void	copy_subs(const char *src, char *dest, int len)
 	dest[len] = '\0';
 }
 
-char	**split_subs(const char *s, char c, int len, char **result)
+static char	**split_subs(const char *s, char c, int len, char **result)
 {
 	int	i;
 	int	j;
@@ -110,25 +110,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (split_subs(s, c, len, result));
 }
-
-/*
-int	main(void) 
-{
-	char str[] = "123Otter2Potter345";
-	char sep = '2';
-
-    char **result = ft_split(str, sep);
-
-    if (result) 
-    {
-        for (int i = 0; result[i]; i++) 
-        {
-            printf("Subs %d: %s\n", i, result[i]);
-            free(result[i]); 
-        }
-        free(result);
-	}
-	else
-        printf("Malloc Error.\n");
-       return (0);
-}*/

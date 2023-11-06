@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 11:07:15 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/30 11:43:54 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:18:57 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,16 +51,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	newstr[i] = '\0';
 	return (newstr);
 }
-
-/*int	main(void)
-{
-	char *s1 = "Otter";
-	char *s2 = "Potter";
-	//char *comb;
-
-	//comb = 
-	printf("ours: %s\n", ft_strjoin(s1, s2));
-	
-	return(0);
-
-}*/

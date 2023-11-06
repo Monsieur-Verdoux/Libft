@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:37:19 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/26 14:54:23 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:33:28 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,24 +45,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		srclen++;
 	return (srclen);
 }
-/*
-int	main(void)
-{
-	char	test[20] = "learning";
-	char	target[20] = "learning";
-	char	attach[20] = " is fu";
-	size_t	ft;
-	size_t	orginal;
-
-	printf("*** ft results ********\n");
-	ft = ft_strlcpy(test, attach, 20);
-	printf("-> %s\n", test);
-	printf("*** orginal results ***\n");
-	orginal = strlcpy(target, attach, 20);
-	printf("-> %s\n", target);
-	if (ft == orginal)
-		printf("The return values are the same");
-	else
-		printf("The return values are not the same");
-	return (0);
-}*/

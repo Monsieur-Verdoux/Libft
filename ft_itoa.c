@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:59:15 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/03 12:07:45 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:53:01 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Negative numbers must be handled.*/
 
 #include "libft.h"
 
-char	*handle_string(char *str, int len, int is_negative, int n)
+static char	*handle_string(char *str, int len, int is_negative, int n)
 {
 	str = (char *)malloc(len + is_negative + 1);
 	if (str == NULL)
@@ -40,7 +40,7 @@ char	*handle_string(char *str, int len, int is_negative, int n)
 	return (str);
 }
 
-char	*handle_minimum(void)
+static char	*handle_minimum(void)
 {
 	char	*str;
 
@@ -76,19 +76,3 @@ char	*ft_itoa(int n)
 	str = NULL;
 	return (handle_string(str, len, is_negative, n));
 }
-
-/*int	main(void)
-{
-	//ft_itoa(-2147483648);
-
-	printf("result is %s\n", ft_itoa(-2147483648));
-	
-	printf("result is %s\n", ft_itoa(345));
-	
-	printf("result is %s\n", ft_itoa(2147483647));
-	
-	printf("result is %s\n", ft_itoa(-2344));
-	
-	printf("result is %s\n", ft_itoa(0));
-	
-}*/

@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 11:30:04 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/03 18:35:35 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:17:42 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ from the beginning and the end of the string.*/
 
 #include "libft.h"
 
-int	is_separator(char c, char const *charset)
+static int	is_separator(char c, char const *charset)
 {
 	while (*charset)
 	{
@@ -65,29 +65,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	strim[j] = '\0';
 	return (strim);
 }
-
-/*int main(void)
-{
-    char s1[] = "  \t \t \n   \n\n\n\t";
-    char set[] = "";
-    char *result = ft_strtrim(s1, set);
-
-    printf("result is: %s\n", result);
-    free(result);
-    return (0);
-}
-
-int main(void)
-{
-	char s1[] = "123Otter2Potter345";
-	char set[] = "12345";
-	char *result = ft_strtrim(s1, set);
-
-	printf("result is: %s\n", result);
-	free(result);
-	return (0);
-}
-
-note: new_len calculation needs to handle the case when set is " "
-and s1 is "      ". check if new_len is negative and = 0.  
-*/
