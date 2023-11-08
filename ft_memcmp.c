@@ -6,14 +6,14 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:46:35 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 12:08:16 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/07 13:34:51 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*DESCRIPTION         top
+/*DESCRIPTION
        The memcmp() function compares the first n bytes (each
        interpreted as unsigned char) of the memory areas s1 and s2.
-RETURN VALUE         top
+RETURN VALUE
        The memcmp() function returns an integer less than, equal to, or
        greater than zero if the first n bytes of s1 is found,
        respectively, to be less than, to match, or be greater than the
@@ -41,9 +41,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	j = 0;
 	i = 0;
 	while (i < n - 1 && s1ptr[i] == s2ptr[i])
-	{
 		i++;
-	}
 	j = s1ptr[i] - s2ptr[i];
 	return (j);
 }

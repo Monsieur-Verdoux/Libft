@@ -6,11 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:37:19 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 11:33:28 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/07 13:18:18 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*  DESCRIPTION         top
+/*  DESCRIPTION
 		strlcpy(3bsd)
        strlcat(3bsd)
               These functions copy and catenate the input string into a
@@ -20,7 +20,7 @@
               null-terminated).  They return the length of the total
               string they tried to create.  These functions force a
               SIGSEGV if the src pointer is not a string.
-	RETURN VALUE         top
+	RETURN VALUE
 			   The following functions return the length of the total string
        that they tried to create (as if truncation didn't occur).*/
 

@@ -6,7 +6,7 @@
 #    By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/18 15:40:30 by akovalev          #+#    #+#              #
-#    Updated: 2023/11/06 15:23:25 by akovalev         ###   ########.fr        #
+#    Updated: 2023/11/08 17:08:34 by akovalev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ SRC = 	ft_isalnum.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
+		ft_putnbr_fd.c
 
 NAME = libft.a
 
@@ -57,7 +57,7 @@ BONUS = ft_lstnew_bonus.c \
 		ft_lstdelone_bonus.c \
 		ft_lstclear_bonus.c \
 		ft_lstiter_bonus.c \
-		ft_lstmap_bonus.c \
+		ft_lstmap_bonus.c
 
 BONUS_OBJ = $(BONUS:.c=.o)
 
@@ -65,7 +65,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME) 
 
-.o: .c
+%.o: %.c
 	cc $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
@@ -73,13 +73,17 @@ $(NAME): $(OBJ)
 
 clean:
 	rm -f $(OBJ) $(BONUS_OBJ)
+	@rm -rf .bonus
 
 fclean:	clean
 	rm -f $(NAME)
 
 re: fclean all
 
-bonus: $(BONUS_OBJ)
+bonus: .bonus
+
+.bonus: $(NAME) $(BONUS_OBJ)
 	ar -rus $(NAME) $(BONUS_OBJ)
+	@touch .bonus
 
 .PHONY: clean fclean all re bonus

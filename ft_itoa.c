@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:59:15 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 13:53:01 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/08 12:34:28 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Negative numbers must be handled.*/
 
 static char	*handle_string(char *str, int len, int is_negative, int n)
 {
-	str = (char *)malloc(len + is_negative + 1);
+	str = malloc(len + is_negative + 1);
 	if (str == NULL)
 		return (NULL);
 	str[len + is_negative] = '\0';
@@ -44,7 +44,7 @@ static char	*handle_minimum(void)
 {
 	char	*str;
 
-	str = (char *)malloc(12);
+	str = malloc(12);
 	if (str == NULL)
 		return (NULL);
 	ft_strlcpy(str, "-2147483648", 12);

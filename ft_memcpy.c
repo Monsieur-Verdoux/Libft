@@ -6,16 +6,16 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 16:44:40 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 11:31:22 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/07 13:02:43 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-DESCRIPTION         top
+DESCRIPTION
        The memcpy() function copies n bytes from memory area src to
        memory area dest.  The memory areas must not overlap.  Use
        memmove(3) if the memory areas do overlap.
-RETURN VALUE         top
+RETURN VALUE
        The memcpy() function returns a pointer to dest.
 */
 

@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 11:30:04 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 14:17:42 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/08 11:23:53 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,7 @@ static int	is_separator(char c, char const *charset)
 	while (*charset)
 	{
 		if (*charset == c)
-		{
 			return (1);
-		}
 		charset++;
 	}
 	return (0);
@@ -57,7 +55,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new_len = len - i + 1;
 	if (new_len < 0)
 		new_len = 0;
-	strim = (char *)malloc(new_len + 1);
+	strim = malloc(new_len + 1);
 	if (strim == NULL)
 		return (NULL);
 	while (i <= len)

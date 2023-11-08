@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:25:03 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 18:52:30 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/08 15:08:52 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,16 @@ static int	count_subs(char const *s, char sep)
 
 	if (s == NULL)
 		return (0);
-	count = 1;
+	count = 0;
 	while (*s)
 	{
-		if (*s == sep)
+		skip_sep(&s, sep);
+		if (*s)
 		{
-			skip_sep(&s, sep);
-			if (*s)
-				count++;
+			count++;
+			while (*s && *s != sep)
+				s++;
 		}
-		else
-			s++;
 	}
 	return (count);
 }
@@ -74,22 +73,23 @@ char	**ft_split(char const *s, char c)
 
 	if (s == NULL)
 		return (NULL);
-	skip_sep(&s, c);
 	result = ft_calloc((count_subs(s, c) + 1), sizeof(char *));
 	if (result == NULL)
 		return (NULL);
 	i = 0;
 	while (*s)
 	{
-		len = 0;
-		while (s[len] && s[len] != c)
-			len++;
-		result[i] = ft_substr(s, 0, len);
-		if (result[i] == NULL)
-			return (free_all(result));
-		i++;
-		s = s + len;
 		skip_sep(&s, c);
+		if (*s)
+		{
+			len = 0;
+			while (s[len] && s[len] != c)
+				len++;
+			result[i] = ft_substr(s, 0, len);
+			if (result[i++] == NULL)
+				return (free_all(result));
+			s = s + len;
+		}
 	}
 	return (result);
 }

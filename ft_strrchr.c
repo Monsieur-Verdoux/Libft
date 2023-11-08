@@ -6,18 +6,18 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:32:22 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 14:19:05 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/07 13:30:01 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*DESCRIPTION         top
+/*DESCRIPTION
 
        The strrchr() function returns a pointer to the last occurrence
        of the character c in the string s.
 
        Here "character" means "byte"; these functions do not work with
        wide or multibyte characters.
-RETURN VALUE         top
+RETURN VALUE
        The strchr() and strrchr() functions return a pointer to the
        matched character or NULL if the character is not found.  The
        terminating null byte is considered part of the string, so that

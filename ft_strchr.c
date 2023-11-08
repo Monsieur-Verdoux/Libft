@@ -6,17 +6,17 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:04:43 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 11:36:28 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/07 13:29:43 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*DESCRIPTION         top
+/*DESCRIPTION
        The strchr() function returns a pointer to the first occurrence
        of the character c in the string s.
 
        Here "character" means "byte"; these functions do not work with
        wide or multibyte characters.
-RETURN VALUE         top
+RETURN VALUE
        The strchr() and strrchr() functions return a pointer to the
        matched character or NULL if the character is not found.  The
        terminating null byte is considered part of the string, so that

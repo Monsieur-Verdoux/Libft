@@ -6,11 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 17:50:35 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 11:39:01 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/07 13:31:30 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*DESCRIPTION         top
+/*DESCRIPTION
 
 	   The strncmp() function shall compare not more than n bytes (bytes
        that follow a NUL character are not compared) from the array
@@ -20,7 +20,7 @@
        the difference between the values of the first pair of bytes
        (both interpreted as type unsigned char) that differ in the
        strings being compared.
-RETURN VALUE         top
+RETURN VALUE
        Upon successful completion, strncmp() shall return an integer
        greater than, equal to, or less than 0, if the possibly null-
        terminated array pointed to by s1 is greater than, equal to, or

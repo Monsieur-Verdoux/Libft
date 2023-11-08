@@ -6,15 +6,17 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 11:11:26 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 14:24:41 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/08 11:41:38 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*DESCRIPTION         top
+/*DESCRIPTION
        The atoi() function converts the initial portion of the string
        pointed to by nptr to int.  The behavior is the same as
-RETURN VALUE         top
+RETURN VALUE
        The converted value or 0 on error.*/
+
+#include "libft.h"
 
 static int	atoi_putnbr(const char *str, int sign, int i)
 {
@@ -30,11 +32,13 @@ static int	atoi_putnbr(const char *str, int sign, int i)
 		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		result = (result * 10) + (str[i] - '0');
-		if (result < 0 && sign == 1)
+		if (result >= LONG_MAX / 10 && (result > LONG_MAX / 10 \
+		|| (str[i] - '0') > LONG_MAX % 10) && sign == 1)
 			return (-1);
-		else if (result < 0 && sign == -1)
+		else if (result >= LONG_MAX / 10 && (result > LONG_MAX / 10 \
+		|| (str[i] - '0') > LONG_MAX % 10) && sign == -1)
 			return (0);
+		result = (result * 10) + (str[i] - '0');
 		i++;
 	}
 	return (sign * (int)result);

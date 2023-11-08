@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:18:01 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 19:10:29 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/07 17:50:34 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
-	newstr = (char *)malloc(len + 1);
+	newstr = malloc(len + 1);
 	if (!newstr)
 		return (NULL);
 	while (i < len)

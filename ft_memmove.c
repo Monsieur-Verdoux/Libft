@@ -6,17 +6,17 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 11:50:57 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 14:43:30 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/07 13:17:54 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*DESCRIPTION         top
+/*DESCRIPTION
        The memmove() function copies n bytes from memory area src to
        memory area dest.  The memory areas may overlap: copying takes
        place as though the bytes in src are first copied into a
        temporary array that does not overlap src or dest, and the bytes
        are then copied from the temporary array to dest.
-RETURN VALUE         top
+RETURN VALUE
        The memmove() function returns a pointer to dest.*/
 
 #include "libft.h"

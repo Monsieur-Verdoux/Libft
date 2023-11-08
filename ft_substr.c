@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 14:31:39 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 19:10:27 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/08 12:16:53 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (s == NULL || start >= ft_strlen(s) || len == 0)
 	{
-		sub = (char *)malloc(1 * sizeof(char));
+		sub = malloc(1);
 		if (sub == NULL)
 			return (NULL);
 		sub[0] = '\0';
@@ -46,9 +46,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	rem_len = ft_strlen(s) - start;
 	if (len > rem_len)
 		len = rem_len;
-	if (SIZE_MAX - start < len)
-		return (NULL);
-	sub = (char *)malloc((len + 1) * sizeof(char));
+	sub = malloc((len + 1));
 	if (sub == NULL)
 		return (NULL);
 	i = 0;

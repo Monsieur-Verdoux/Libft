@@ -6,11 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 16:37:53 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 11:33:53 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/07 13:24:28 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*  DESCRIPTION         top
+/*  DESCRIPTION
 		strlcpy(3bsd)
        strlcat(3bsd)
               These functions copy and catenate the input string into a
@@ -26,7 +26,7 @@
      dstsize is 0 or the original dst string was longer than dstsize (in prac-
      tice this should not happen as it means that either dstsize is incorrect
      or that dst is not a proper string).
-	RETURN VALUE         top
+	RETURN VALUE
 			   The following functions return the length of the total string
        that they tried to create (as if truncation didn't occur).*/
 

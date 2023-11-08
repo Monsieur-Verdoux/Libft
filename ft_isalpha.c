@@ -6,15 +6,15 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 18:33:39 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 14:23:28 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/07 12:58:43 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*DESCRIPTION         top
+/*DESCRIPTION
        isalnum()
               checks for an alphanumeric character; it is equivalent to
               (isalpha(c) || isdigit(c)).
-RETURN VALUE         top
+RETURN VALUE
        The values returned are nonzero if the character c falls into the
        tested class, and zero if not.*/
 

@@ -6,17 +6,17 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:52 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 15:44:53 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/08 14:38:12 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*DESCRIPTION         top
+/*DESCRIPTION
 		void *calloc(size_t nelem, size_t elsize);
        The calloc() function shall allocate unused space for an array of
        nelem elements each of whose size in bytes is elsize.  The space
        shall be initialized to all bits 0.
        
-RETURN VALUE         top
+RETURN VALUE
        Upon successful completion with both nelem and elsize non-zero,
        calloc() shall return a pointer to the allocated space. If either
        nelem or elsize is 0, then either:
@@ -33,23 +33,6 @@ RETURN VALUE         top
 
 #include "libft.h"
 
-/*void	*ft_calloc(size_t count, size_t size)
-{
-	void	*p;
-	size_t	max_size;
-
-	max_size = 4611686014132420608;
-	if (count == 0 || size == 0)
-		return (ft_calloc(1, 1));
-	if (count != 0 && max_size / count < size)
-		return ((void *)0);
-	p = (void *)malloc(count * size * sizeof(void));
-	if (!p)
-		return ((void *)0);
-	ft_bzero(p, count * size);
-	return (p);
-}*/
-
 void	*ft_calloc(size_t count, size_t size)
 {
 	char	*ptr;
@@ -57,8 +40,6 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	max;
 
 	max = 4611686014132420608;
-	if (count == 0 || size == 0)
-		return (ft_calloc(1, 1));
 	if (count != 0 && max / count < size)
 		return (NULL);
 	i = 0;

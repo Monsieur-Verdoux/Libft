@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:53:42 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/03 17:12:58 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:27:27 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,17 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
 	t_list	*head;
+	void	*fcont;
 
 	head = NULL;
 	while (lst)
 	{
-		new = ft_lstnew(f(lst->content));
+		fcont = f(lst->content);
+		new = ft_lstnew(fcont);
 		if (new == NULL)
 		{
 			ft_lstclear(&head, del);
+			del(fcont);
 		}
 		ft_lstadd_back(&head, new);
 		lst = lst->next;
