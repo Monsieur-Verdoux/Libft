@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:10:25 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 14:22:53 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:32:53 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Function name ft_lstdelone
 Prototype void ft_lstdelone(t_list *lst, void (*del)(void
 *));
-Turn in files -
 Parameters lst: The node to free.
 del: The address of the function used to delete
 the content.

@@ -6,13 +6,12 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:16:25 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 17:14:23 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:32:13 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Function name ft_putendl_fd
 Prototype void ft_putendl_fd(char *s, int fd);
-Turn in files -
 Parameters s: The string to output.
 fd: The file descriptor on which to write.
 Return value None

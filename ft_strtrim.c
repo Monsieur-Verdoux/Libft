@@ -6,13 +6,12 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 11:30:04 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/08 11:23:53 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:31:07 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Function name ft_strtrim
 Prototype char *ft_strtrim(char const *s1, char const *set);
-Turn in files -
 Parameters s1: The string to be trimmed.
 set: The reference set of characters to trim.
 Return value The trimmed string.

@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:47:45 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/03 16:52:54 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:32:48 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Function name ft_lstiter
 Prototype void ft_lstiter(t_list *lst, void (*f)(void *));
-Turn in files -
 Parameters lst: The address of a pointer to a node.
 f: The address of the function used to iterate on
 the list.

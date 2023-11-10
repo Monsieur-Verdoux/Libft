@@ -6,14 +6,13 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 14:31:39 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/08 12:16:53 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:31:01 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Function name ft_substr
 Prototype char *ft_substr(char const *s, unsigned int start,
 size_t len);
-Turn in files -
 Parameters s: The string from which to create the substring.
 start: The start index of the substring in the
 string ’s’.

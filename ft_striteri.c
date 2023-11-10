@@ -6,14 +6,13 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 12:06:31 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 13:57:36 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:31:50 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Function name ft_striteri
 Prototype void ft_striteri(char *s, void (*f)(unsigned int,
 char*));
-Turn in files -
 Parameters s: The string on which to iterate.
 f: The function to apply to each character.
 Return value None

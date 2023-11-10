@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 13:34:39 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 14:20:52 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:32:33 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Function name ft_lstnew
 Prototype t_list *ft_lstnew(void *content);
-Turn in files -
 Parameters content: The content to create the node with.
 Return value The new node
 External functs. malloc

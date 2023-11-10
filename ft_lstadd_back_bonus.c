@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 12:53:55 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 12:26:15 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:33:09 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Function name ft_lstadd_back
 Prototype void ft_lstadd_back(t_list **lst, t_list *new);
-Turn in files -
 Parameters lst: The address of a pointer to the first link of
 a list.
 new: The address of a pointer to the node to be

@@ -6,14 +6,13 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:18:01 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/07 17:50:34 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:31:29 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Function name ft_strmapi
 Prototype char *ft_strmapi(char const *s, char (*f)(unsigned
 int, char));
-Turn in files -
 Parameters s: The string on which to iterate.
 f: The function to apply to each character.
 Return value The string created from the successive applications

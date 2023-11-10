@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 16:44:40 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/07 13:02:43 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/10 12:55:17 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char	*pdst;
 	unsigned char	*psrc;
 
-	if (dst == NULL & src == NULL)
+	if (dst == NULL && src == NULL)
 		return (NULL);
 	i = 0;
 	pdst = (unsigned char *)dst;

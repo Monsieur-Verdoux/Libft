@@ -6,13 +6,12 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:59:15 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/08 12:34:28 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:33:15 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Function name ft_itoa
 Prototype char *ft_itoa(int n);
-Turn in files -
 Parameters n: the integer to convert.
 Return value The string representing the integer.
 NULL if the allocation fails.

@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 12:37:35 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/03 12:53:18 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:32:44 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Function name ft_lstlast
 Prototype t_list *ft_lstlast(t_list *lst);
-Turn in files -
 Parameters lst: The beginning of the list.
 Return value Last node of the list
 External functs. None

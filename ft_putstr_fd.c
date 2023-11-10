@@ -6,13 +6,12 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:09:55 by akovalev          #+#    #+#             */
-/*   Updated: 2023/10/31 13:15:21 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:32:04 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Function name ft_putstr_fd
 Prototype void ft_putstr_fd(char *s, int fd);
-Turn in files -
 Parameters s: The string to output.
 fd: The file descriptor on which to write.
 Return value None

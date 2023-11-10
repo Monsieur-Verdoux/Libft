@@ -6,13 +6,12 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:05:20 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 12:30:56 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:32:17 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Function name ft_putchar_fd
 Prototype void ft_putchar_fd(char c, int fd);
-Turn in files -
 Parameters c: The character to output.
 fd: The file descriptor on which to write.
 Return value None

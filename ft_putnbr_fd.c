@@ -6,13 +6,12 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:20:52 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 12:21:38 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:32:08 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Function name ft_putnbr_fd
 Prototype void ft_putnbr_fd(int n, int fd);
-Turn in files -
 Parameters n: The integer to output.
 fd: The file descriptor on which to write.
 Return value None

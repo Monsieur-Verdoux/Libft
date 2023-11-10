@@ -6,13 +6,12 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 11:07:15 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/08 12:22:11 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:31:45 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Function name ft_strjoin
 Prototype char *ft_strjoin(char const *s1, char const *s2);
-Turn in files -
 Parameters s1: The prefix string.
 s2: The suffix string.
 Return value The new string.

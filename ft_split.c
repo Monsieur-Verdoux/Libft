@@ -6,13 +6,12 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:25:03 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/08 15:08:52 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:31:58 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Function name ft_split
 Prototype char **ft_split(char const *s, char c);
-Turn in files -
 Parameters s: The string to be split.
 c: The delimiter character.
 Return value The array of new strings resulting from the split.

@@ -6,14 +6,13 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:53:42 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/08 16:27:27 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:32:39 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Function name ft_lstmap
 Prototype t_list *ft_lstmap(t_list *lst, void *(*f)(void *),
 void (*del)(void *));
-Turn in files -
 Parameters lst: The address of a pointer to a node.
 f: The address of the function used to iterate on
 the list.

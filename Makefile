@@ -6,7 +6,7 @@
 #    By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/18 15:40:30 by akovalev          #+#    #+#              #
-#    Updated: 2023/11/08 17:08:34 by akovalev         ###   ########.fr        #
+#    Updated: 2023/11/08 16:59:26 by akovalev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,7 +83,7 @@ re: fclean all
 bonus: .bonus
 
 .bonus: $(NAME) $(BONUS_OBJ)
-	ar -rus $(NAME) $(BONUS_OBJ)
+	ar -crs $(NAME) $(BONUS_OBJ)
 	@touch .bonus
 
 .PHONY: clean fclean all re bonus
