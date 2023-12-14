@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:04:43 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/07 13:29:43 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/12/14 15:09:40 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ RETURN VALUE
 
 char	*ft_strchr(const char *s, int c)
 {
+	if (!s)
+		return (NULL);
 	while (*s != '\0')
 	{
 		if (*s == (char)c)

@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:32:22 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/07 13:30:01 by akovalev         ###   ########.fr       */
+/*   Updated: 2023/12/14 15:10:13 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ char	*ft_strrchr(const char *s, int c)
 {
 	const char	*s_end;
 
+	if (!s)
+		return (NULL);
 	s_end = s + ft_strlen(s);
 	while (s_end >= s)
 	{
