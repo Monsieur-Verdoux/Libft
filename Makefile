@@ -6,7 +6,7 @@
 #    By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/18 15:40:30 by akovalev          #+#    #+#              #
-#    Updated: 2023/12/14 15:04:13 by akovalev         ###   ########.fr        #
+#    Updated: 2024/01/08 18:20:12 by akovalev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,12 @@ SRC = 	ft_isalnum.c \
 		ft_unsigned_pf.c \
 		ft_hex_pf.c \
 		ft_ptr_pf.c \
-		get_next_line_bonus.c 
+		get_next_line_bonus.c \
+		vector.c \
+		vector1.c \
+		vector2.c \
+		vector3.c 
+		
 NAME = libft.a
 
 OBJ = $(SRC:.c=.o)

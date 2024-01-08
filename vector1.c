@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 18:16:14 by akovalev          #+#    #+#             */
-/*   Updated: 2024/01/05 17:11:17 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 17:21:22 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,8 @@ int	vec_push(t_vec *dst, void *src)
 			return (-1);
 	ft_memmove(&dst->memory[dst->len * dst->elem_size], src, dst->elem_size);
 	dst->len++;
-	ft_printf("len: %d\n", dst->len);
-	ft_printf("size: %d\n", dst->alloc_size);
-	ft_printf("dst: %d\n", dst->memory[dst->len * dst->elem_size - 4]);
 	return (1);
 }
-//note: in the actual code the line is if (vec_resize(dst, dst->len * 2) < 0) whic is incorrect? No, it's because we use a diff parameter, need to sort it out
 
 /*A function vec_pop which will remove the last 
 element from the vector and copy it to dst.*/
@@ -40,8 +36,8 @@ int	vec_pop(void *dst, t_vec *src)
 {
 	if (!dst || !src || !src->memory)
 		return (-1);
-	ft_memmove(dst, &src->memory[src->elem_size * src->len - 4], src->elem_size);
-	ft_printf("dst[0]: %d\n", *(int *)dst);
+	ft_memmove(dst, &src->memory[src->elem_size * (src->len - 1)], \
+		src->elem_size);
 	src->len--;
 	return (1);
 }
@@ -67,11 +63,13 @@ int	vec_insert(t_vec *dst, void *src, size_t index)
 	if (dst->elem_size * dst->len >= dst->alloc_size)
 		if (vec_resize(dst, dst->len * 2) < 0)
 			return (-1);
-	ft_memmove(vec_get(dst, index) + dst->elem_size, vec_get(dst, index), (dst->len - index) * dst->elem_size);
+	ft_memmove(vec_get(dst, index) + dst->elem_size, \
+		vec_get(dst, index), (dst->len - index) * dst->elem_size);
 	ft_memcpy(vec_get(dst, index), src, dst->elem_size);
 	dst->len++;
-	return(1);
+	return (1);
 }
+
 /*A function vec_remove which will remove 
 an element from any position in the vector 
 without overwriting existing elements.*/
@@ -80,7 +78,8 @@ int	vec_remove(t_vec *src, size_t index)
 	if (!src || index > src->len)
 		return (-1);
 	if (index != src->len)
-		ft_memmove(vec_get(src, index), vec_get(src, index) + src->elem_size, (src->len - index) * src->elem_size);
+		ft_memmove(vec_get(src, index), vec_get(src, index) + src->elem_size, \
+			(src->len - index) * src->elem_size);
 	src->len--;
 	return (1);
 }
@@ -136,7 +135,6 @@ int	vec_remove(t_vec *src, size_t index)
 //     vec_free(&t1);
 //     printf("test_vec_get successful!\n");
 // }
-
 
 // int main(void)
 // {

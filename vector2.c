@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 16:00:33 by akovalev          #+#    #+#             */
-/*   Updated: 2024/01/05 17:59:15 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 18:18:33 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ int	vec_append(t_vec *dst, t_vec *src)
 		if (vec_new(dst, 1, dst->elem_size) == -1)
 			return (-1);
 	alloc_size = (dst->len + src->len) * src->elem_size;
-	ft_printf("orig size: %d\n", dst->alloc_size);
-	ft_printf("new size: %d\n", alloc_size);
 	if (dst->alloc_size < alloc_size)
 	{
 		if (dst->alloc_size * 2 < alloc_size)
@@ -36,15 +34,14 @@ int	vec_append(t_vec *dst, t_vec *src)
 		else if (vec_resize(dst, dst->len * 2) == -1)
 			return (-1);
 	}
-	ft_printf("orig size: %d\n", dst->alloc_size);
-	ft_printf("new size: %d\n", alloc_size);
 	ft_memmove(&dst->memory[dst->elem_size * dst->len], \
 		src->memory, src->elem_size * src->len);
 	dst->len += src->len;
 	return (1);
 }
+
 /*A function vec_prepend which prepends vector src to dst.*/
-int vec_prepend(t_vec *dst, t_vec *src)
+int	vec_prepend(t_vec *dst, t_vec *src)
 {
 	size_t	alloc_size;
 
@@ -72,18 +69,16 @@ int vec_prepend(t_vec *dst, t_vec *src)
 
 /*A function vec_iter which takes as an 
 argument a function f applied to each element in the vector.*/
-void vec_iter(t_vec *src, void (*f) (void *))
+void	vec_iter(t_vec *src, void (*f) (void *))
 {
 	size_t	i;
 
 	if (!src || !f || src->memory)
 		return ;
 	i = 0;
-	ft_printf("len: %d\n", src->len);
 	while (i < src->len)
 	{
 		f(&src->memory[src->elem_size * i]);
-		ft_printf("elem: %d\n", src->memory[src->elem_size * i]);
 		i++;
 	}
 }
@@ -93,18 +88,30 @@ a function f applied to a copy of each element in
 the vector. The copied element will be added to vector dst.*/
 void	vec_map(t_vec *dst, t_vec *src, void (*f) (void *))
 {
+	void	*ptr;
+	void	*res;
 	size_t	i;
 
-	if (!src || ! dst || !f || !src->memory)
+	if (!src || !dst || !f || !src->memory)
+		return ;
+	else if (!dst->memory)
+		if (vec_new(dst, 1, dst->elem_size) == -1)
+			return ;
+	res = malloc(dst->elem_size);
+	if (!res)
 		return ;
 	i = 0;
 	while (i < src->len)
 	{
-		f(&src->memory[src->elem_size * i]);
-		vec_insert(dst, &src->memory[src->elem_size * i], i);
+		ptr = vec_get(src, i);
+		ft_memmove(res, ptr, dst->elem_size);
+		f(res);
+		vec_push(dst, res);
 		i++;
 	}
+	free(res);
 }
+//ask Ryan why first copy
 
 /*a function vec_filter which takes as an argument 
 a function f applied to a copy of each element in 
@@ -112,113 +119,31 @@ the vector. The copied element will be added to vector
 dst if true is returned from f.*/
 int	vec_filter(t_vec *dst, t_vec *src, bool (*f) (void *))
 {
+	void	*ptr;
+	void	*res;
 	size_t	i;
-	size_t	j;
 
-	if (!src || ! dst || !f || !src->memory)
+	if (!src || !dst || !f || !src->memory)
+		return (-1);
+	else if (!dst->memory)
+		if (vec_new(dst, 1, dst->elem_size) == -1)
+			return (-1);
+	res = malloc(dst->elem_size);
+	if (!res)
 		return (-1);
 	i = 0;
-	j = 0;
 	while (i < src->len)
 	{
-		if (f(vec_get(src, i)))
-		{
-			vec_insert(dst, vec_get(src, i), j);
-			ft_printf("elem: %d\n", dst->memory[j * dst->elem_size]);
-			j++;
-		}
+		ptr = vec_get(src, i);
+		ft_memmove(res, ptr, dst->elem_size);
+		if (f(res) == true)
+			vec_push(dst, res);
 		i++;
 	}
+	free(res);
 	return (1);
 }
 //ask Ryan about his implementation
-
-/*a function vec_reduce which takes as an argument 
-a function f applied to each element in the vector. 
-Function f takes acc as it's first argument thus we can 
-reduce the elements in the vector into one element.*/
-int	vec_reduce(void *acc, t_vec *src, void (*f) (void *, void *))
-{
-	size_t	i;
-
-	if (!acc || !src || !f)
-		return (-1);
-	i = 0;
-	while (i < src->len)
-	{
-		f(acc, &src->memory[i * src->elem_size]);
-		i++;
-	}
-	return (1);
-}
-/*a function vec_sort which takes in a function f 
-determining order and equality of the two elements 
-passed as parameters and thus sorting the array accordingly 
-from the smallest to the largest element.*/
-int cmp1(void *a, void *b)
-{
-    return ((long)*(int *)a - *(int *)b);
-}
-void    vec_sort(t_vec *src, int (*f)(void *, void *))
-{
-	size_t	i;
-	int		j;
-	int		temp;
-	int		*tempptr;
-
-	if (!src || !f || !src->memory)
-		return ;
-	i = 0;
-	j = 0;
-	while (i < src->len)
-	{
-		ft_printf("current: %d\n", *(int *)vec_get(src, i));
-		if (cmp1(vec_get(src, i), &src->memory[(i + 1) * src->elem_size]) > 0)
-		{
-			temp = *(int *)vec_get(src, i);
-			tempptr = &temp;
-			ft_printf("current swap: %d\n", temp);
-			vec_remove(src, i);
-			vec_insert(src, tempptr, i + 1);
-			i = 0;
-		}
-		else
-			i++;
-	}
-}
-
-
-
-int main(void)
-{
-    t_vec   t1;
-    int     base[] = {3, 2, 2, 7, 4};
-    int     expect[] = {2, 2, 3, 4, 7};
-
-    assert(vec_from(&t1, base, 5, sizeof(int)) > 0);
-    vec_sort(&t1, cmp1);
-    assert(memcmp(t1.memory, expect, sizeof(expect)) == 0);
-    vec_free(&t1);
-    printf("test_vec_sort successful!\n");
-}
-
-// void reduce_tester(void *acc, void *src)
-// {
-//     *(int *)acc += *(int *)src;
-// }
-
-// int main(void)
-// {
-//     t_vec   t1;
-//     int     base[] = {1, 2, 3, 4, 5};
-//     int     result = 0;
-
-//     assert(vec_from(&t1, base, 5, sizeof(int)) > 0);
-//     vec_reduce(&result, &t1, reduce_tester);
-//     assert(result == 15);
-//     vec_free(&t1);
-//     printf("test_vec_reduce successful!\n");
-// }
 
 // bool filter_tester(void *src)
 // {

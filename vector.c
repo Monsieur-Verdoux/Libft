@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 14:22:38 by akovalev          #+#    #+#             */
-/*   Updated: 2024/01/05 14:06:51 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 17:21:18 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ void	vec_free(t_vec *src)
 	src->elem_size = 0;
 	src->len = 0;
 }
-//why does the original also has if (!src || src->alloc_size == 0) check? Also, should there be if (!src->memory) check?
+//why does the original also has if (!src || src->alloc_size == 0) 
+//check? Also, should there be if (!src->memory) check?
 
 /*A function vec_from which takes in a pointer to some
  memory, which then will be copied over to the new vector.*/
@@ -91,25 +92,25 @@ int	vec_resize(t_vec *src, size_t target_len)
 {
 	unsigned char	*temp;
 
-	if (!src || target_len < 0)
+	if (!src)
 		return (-1);
 	else if (!src->memory)
 		return (vec_new(src, target_len, src->elem_size));
 	src->alloc_size = target_len * src->elem_size;
 	temp = src->memory;
 	src->memory = malloc(src->alloc_size);
-	if (!temp)
+	if (!src->memory)
 		return (-1);
-	if (!ft_memmove(src->memory, temp, src->len * src->elem_size))
+	if (ft_memmove(src->memory, temp, src->len * src->elem_size) == NULL)
 		return (-1);
 	free(temp);
 	temp = NULL;
 	return (1);
 }
 
-//note: ask Ryan why -1 in case of !src->memory, also o using size over len is a conscious choice
+//note: ask Ryan why -1 in case of !src->memory, also 
+//using size over len is a conscious choice
 //also memmove 3rd parameter, also temp=null
-//confusion between len and size in the original for resize, is it supposed to take len or len*elem_size? len makes more sense?
 
 // int main(void)
 // {
