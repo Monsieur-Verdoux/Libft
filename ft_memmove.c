@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 11:50:57 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/07 13:17:54 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/04 16:14:57 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*DESCRIPTION
        The memmove() function copies n bytes from memory area src to
@@ -18,9 +20,6 @@
        are then copied from the temporary array to dest.
 RETURN VALUE
        The memmove() function returns a pointer to dest.*/
-
-#include "libft.h"
-
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char		*pdst;

@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 11:30:04 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/09 11:31:07 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:47:42 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*Function name ft_strtrim
 Prototype char *ft_strtrim(char const *s1, char const *set);
@@ -20,9 +22,6 @@ External functs. malloc
 Description Allocates (with malloc(3)) and returns a copy of
 ’s1’ with the characters specified in ’set’ removed
 from the beginning and the end of the string.*/
-
-#include "libft.h"
-
 static int	is_separator(char c, char const *charset)
 {
 	while (*charset)

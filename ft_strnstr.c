@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 19:47:42 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 14:17:57 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:47:29 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*DESCRIPTION
 		char *strnstr(const char *big,	const char *little, size_t len);
@@ -22,9 +24,6 @@ RETURN VALUES
        If little is an empty string, big is returned; if little	occurs nowhere
        in big, NULL is returned; otherwise a pointer to	the first character of
        the first occurrence of little is returned.*/
-
-#include "libft.h"
-
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;

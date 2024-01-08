@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:59:15 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/09 11:33:15 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:43:43 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*Function name ft_itoa
 Prototype char *ft_itoa(int n);
@@ -19,9 +21,6 @@ External functs. malloc
 Description Allocates (with malloc(3)) and returns a string
 representing the integer received as an argument.
 Negative numbers must be handled.*/
-
-#include "libft.h"
-
 static char	*handle_string(char *str, int len, int is_negative, int n)
 {
 	str = malloc(len + is_negative + 1);

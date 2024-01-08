@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 12:06:31 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/09 11:31:50 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:46:39 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*Function name ft_striteri
 Prototype void ft_striteri(char *s, void (*f)(unsigned int,
@@ -21,9 +23,6 @@ Description Applies the function ’f’ on each character of
 the string passed as argument, passing its index
 as first argument. Each character is passed by address to ’f’ 
 to be modified if necessary*/
-
-#include "libft.h"
-
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;

@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:10:25 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/09 11:32:53 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:44:24 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*Function name ft_lstdelone
 Prototype void ft_lstdelone(t_list *lst, void (*del)(void
@@ -22,9 +24,6 @@ Description Takes as a parameter a node and frees the memory of
 the node’s content using the function ’del’ given
 as a parameter and free the node. The memory of
 ’next’ must not be freed.*/
-
-#include "libft.h"
-
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (lst)

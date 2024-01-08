@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 11:07:15 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/09 11:31:45 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:46:44 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*Function name ft_strjoin
 Prototype char *ft_strjoin(char const *s1, char const *s2);
@@ -20,9 +22,6 @@ External functs. malloc
 Description Allocates (with malloc(3)) and returns a new
 string, which is the result of the concatenation
 of ’s1’ and ’s2’.*/
-
-#include "libft.h"
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*newstr;

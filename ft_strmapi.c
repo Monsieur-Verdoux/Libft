@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:18:01 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/09 11:31:29 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:47:17 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*Function name ft_strmapi
 Prototype char *ft_strmapi(char const *s, char (*f)(unsigned
@@ -23,9 +25,6 @@ Description Applies the function ’f’ to each character of the
 string ’s’, and passing its index as first argument
 to create a new string (with malloc(3)) resulting
 from successive applications of ’f’.*/
-
-#include "libft.h"
-
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*newstr;

@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 14:31:39 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/09 11:31:01 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:47:50 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*Function name ft_substr
 Prototype char *ft_substr(char const *s, unsigned int start,
@@ -25,9 +27,6 @@ from the string ’s’.
 The substring begins at index ’start’ and is of
 maximum size ’len’.
 */
-
-#include "libft.h"
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;

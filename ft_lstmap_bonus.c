@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:53:42 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/09 11:32:39 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:44:41 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*Function name ft_lstmap
 Prototype t_list *ft_lstmap(t_list *lst, void *(*f)(void *),
@@ -26,9 +28,6 @@ Description Iterates the list ’lst’ and applies the function
 list resulting of the successive applications of
 the function ’f’. The ’del’ function is used to
 delete the content of a node if needed.*/
-
-#include "libft.h"
-
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;

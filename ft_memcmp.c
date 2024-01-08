@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:46:35 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/07 13:34:51 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:45:19 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*DESCRIPTION
        The memcmp() function compares the first n bytes (each
@@ -24,9 +26,6 @@ RETURN VALUE
        unsigned char) that differ in s1 and s2.
 
        If n is zero, the return value is zero.*/
-
-#include "libft.h"
-
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*s1ptr;

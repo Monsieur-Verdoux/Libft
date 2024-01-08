@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:02:38 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/09 11:33:04 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:44:05 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*Function name ft_lstadd_front
 Prototype void ft_lstadd_front(t_list **lst, t_list *new);
@@ -19,9 +21,6 @@ added to the list.
 Return value None
 External functs. None
 Description Adds the node ’new’ at the beginning of the list.*/
-
-#include "libft.h"
-
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (lst)

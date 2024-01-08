@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:05:52 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/08 14:38:12 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:43:01 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*DESCRIPTION
 		void *calloc(size_t nelem, size_t elsize);
@@ -30,9 +32,6 @@ RETURN VALUE
 
        Otherwise, it shall return a null pointer and set errno to
        indicate the error.*/
-
-#include "libft.h"
-
 void	*ft_calloc(size_t count, size_t size)
 {
 	char	*ptr;

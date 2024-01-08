@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:24:06 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/07 13:33:25 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:45:13 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*DESCRIPTION
        The memchr() function scans the initial n bytes of the memory
@@ -20,9 +22,6 @@ RETURN VALUE
        The memchr() and memrchr() functions return a pointer to the
        matching byte or NULL if the character does not occur in the
        given memory area.*/
-
-#include "libft.h"
-
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*ptr;

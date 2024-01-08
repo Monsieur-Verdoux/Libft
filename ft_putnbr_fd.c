@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:20:52 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/09 11:32:08 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:45:57 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*Function name ft_putnbr_fd
 Prototype void ft_putnbr_fd(int n, int fd);
@@ -18,9 +20,6 @@ Return value None
 External functs. write
 Description Outputs the integer ’n’ to the given file
 descriptor.*/
-
-#include "libft.h"
-
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)

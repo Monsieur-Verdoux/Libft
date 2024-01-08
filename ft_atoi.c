@@ -6,15 +6,9 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 11:11:26 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/09 11:14:19 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:42:31 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*DESCRIPTION
-       The atoi() function converts the initial portion of the string
-       pointed to by nptr to int.
-RETURN VALUE
-       The converted value or 0 on error.*/
 
 #include "libft.h"
 
@@ -46,6 +40,11 @@ static int	atoi_putnbr(const char *str, int sign, int i)
 	return (sign * (int)result);
 }
 
+/*DESCRIPTION
+       The atoi() function converts the initial portion of the string
+       pointed to by nptr to int.
+RETURN VALUE
+       The converted value or 0 on error.*/
 int	ft_atoi(const char *str)
 {
 	int		i;

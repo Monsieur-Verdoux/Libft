@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:24:54 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/09 11:32:59 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:44:11 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*Function name ft_lstclear
 Prototype void ft_lstclear(t_list **lst, void (*del)(void
@@ -23,9 +25,6 @@ successor of that node, using the function ’del’
 and free(3).
 Finally, the pointer to the list must be set to
 NULL.*/
-
-#include "libft.h"
-
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;

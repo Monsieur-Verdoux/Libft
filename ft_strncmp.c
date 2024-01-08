@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 17:50:35 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/07 13:31:30 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:47:23 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*DESCRIPTION
 
@@ -26,9 +28,6 @@ RETURN VALUE
        terminated array pointed to by s1 is greater than, equal to, or
        less than the possibly null-terminated array pointed to by s2
        respectively.*/
-
-#include "libft.h"
-
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

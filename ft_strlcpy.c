@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:37:19 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/07 13:18:18 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:47:03 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*  DESCRIPTION
 		strlcpy(3bsd)
@@ -23,9 +25,6 @@
 	RETURN VALUE
 			   The following functions return the length of the total string
        that they tried to create (as if truncation didn't occur).*/
-
-#include "libft.h"
-
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	srclen;

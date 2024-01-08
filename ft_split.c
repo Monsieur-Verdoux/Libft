@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:25:03 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/09 11:31:58 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:46:15 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*Function name ft_split
 Prototype char **ft_split(char const *s, char c);
@@ -21,9 +23,6 @@ Description Allocates (with malloc(3)) and returns an array
 of strings obtained by splitting ’s’ using the
 character ’c’ as a delimiter. The array must end
 with a NULL pointer.*/
-
-#include "libft.h"
-
 static void	skip_sep(char const **s, char sep)
 {
 	while (**s && **s == sep)

@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 13:34:39 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/09 11:32:33 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:44:59 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*Function name ft_lstnew
 Prototype t_list *ft_lstnew(void *content);
@@ -19,9 +21,6 @@ Description Allocates (with malloc(3)) and returns a new node.
 The member variable ’content’ is initialized with
 the value of the parameter ’content’. The variable
 ’next’ is initialized to NULL.*/
-
-#include "libft.h"
-
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_node;

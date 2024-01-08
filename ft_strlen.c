@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 18:51:48 by akovalev          #+#    #+#             */
-/*   Updated: 2023/11/06 11:29:20 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:47:12 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*DESCRIPTION         top
        The strlen() function calculates the length of the string pointed
@@ -16,9 +18,6 @@
 RETURN VALUE         top
        The strlen() function returns the number of bytes in the string
        pointed to by s.*/
-
-#include "libft.h"
-
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;

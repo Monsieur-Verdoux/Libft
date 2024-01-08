@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:04:43 by akovalev          #+#    #+#             */
-/*   Updated: 2023/12/14 15:09:40 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:46:22 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*DESCRIPTION
        The strchr() function returns a pointer to the first occurrence
@@ -22,9 +24,6 @@ RETURN VALUE
        terminating null byte is considered part of the string, so that
        if c is specified as '\0', these functions return a pointer to
        the terminator.*/
-
-#include "libft.h"
-
 char	*ft_strchr(const char *s, int c)
 {
 	if (!s)

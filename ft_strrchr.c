@@ -6,9 +6,11 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:32:22 by akovalev          #+#    #+#             */
-/*   Updated: 2023/12/14 15:10:13 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 14:47:37 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*DESCRIPTION
 
@@ -23,9 +25,6 @@ RETURN VALUE
        terminating null byte is considered part of the string, so that
        if c is specified as '\0', these functions return a pointer to
        the terminator.*/
-
-#include "libft.h"
-
 char	*ft_strrchr(const char *s, int c)
 {
 	const char	*s_end;
