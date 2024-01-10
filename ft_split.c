@@ -6,23 +6,12 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:25:03 by akovalev          #+#    #+#             */
-/*   Updated: 2024/01/08 14:46:15 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/09 15:05:49 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*Function name ft_split
-Prototype char **ft_split(char const *s, char c);
-Parameters s: The string to be split.
-c: The delimiter character.
-Return value The array of new strings resulting from the split.
-NULL if the allocation fails.
-External functs. malloc, free
-Description Allocates (with malloc(3)) and returns an array
-of strings obtained by splitting ’s’ using the
-character ’c’ as a delimiter. The array must end
-with a NULL pointer.*/
 static void	skip_sep(char const **s, char sep)
 {
 	while (**s && **s == sep)
@@ -63,6 +52,17 @@ static char	**free_all(char **result)
 	return (0);
 }
 
+/*Function name ft_split
+Prototype char **ft_split(char const *s, char c);
+Parameters s: The string to be split.
+c: The delimiter character.
+Return value The array of new strings resulting from the split.
+NULL if the allocation fails.
+External functs. malloc, free
+Description Allocates (with malloc(3)) and returns an array
+of strings obtained by splitting ’s’ using the
+character ’c’ as a delimiter. The array must end
+with a NULL pointer.*/
 char	**ft_split(char const *s, char c)
 {
 	int		len;

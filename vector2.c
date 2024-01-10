@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 16:00:33 by akovalev          #+#    #+#             */
-/*   Updated: 2024/01/08 18:18:33 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/08 18:59:37 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	vec_append(t_vec *dst, t_vec *src)
 	{
 		if (dst->alloc_size * 2 < alloc_size)
 		{
-			if (vec_resize(dst, alloc_size / dst->elem_size) == -1)
+			if (vec_resize(dst, dst->len + src->len) == -1)
 				return (-1);
 		}
 		else if (vec_resize(dst, dst->len * 2) == -1)

@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 18:17:59 by akovalev          #+#    #+#             */
-/*   Updated: 2024/01/08 18:19:33 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/10 15:37:00 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,12 @@ from the smallest to the largest element.*/
 void	vec_sort(t_vec *src, int (*f)(void *, void *))
 {
 	size_t	i;
-	int		j;
 	int		temp;
 	int		*tempptr;
 
 	if (!src || !f || !src->memory)
 		return ;
 	i = 0;
-	j = 0;
 	while (i < src->len)
 	{
 		if (f(vec_get(src, i), &src->memory[(i + 1) * src->elem_size]) > 0)
