@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 18:17:59 by akovalev          #+#    #+#             */
-/*   Updated: 2024/01/23 16:12:40 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/23 16:21:22 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	vec_reduce(void *acc, t_vec *src, void (*f) (void *, void *))
 	}
 	return (1);
 }
+
 /*a function vec_sort which takes in a function f 
 determining order and equality of the two elements 
 passed as parameters and thus sorting the array accordingly 
