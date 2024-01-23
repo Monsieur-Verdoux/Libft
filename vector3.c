@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 18:17:59 by akovalev          #+#    #+#             */
-/*   Updated: 2024/01/23 16:21:22 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/23 16:24:07 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	vec_int(t_vec *vec, int index)
 /*a function vec_print that prints out the elements of the vector.*/
 void	vec_print(t_vec *vec)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < vec->len)
