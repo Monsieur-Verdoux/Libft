@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 13:31:39 by akovalev          #+#    #+#             */
-/*   Updated: 2024/01/05 17:09:47 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/23 16:12:50 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,7 @@ void	vec_map(t_vec *dst, t_vec *src, void (*f) (void *));
 int		vec_filter(t_vec *dst, t_vec *src, bool (*f) (void *));
 int		vec_reduce(void *dst, t_vec *src, void (*f) (void *, void *));
 void	vec_sort(t_vec *src, int (*f)(void *, void *));
+int		vec_int(t_vec *vec, int index);
+void	vec_print(t_vec *vec);
 
 #endif

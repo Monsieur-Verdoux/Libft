@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 18:17:59 by akovalev          #+#    #+#             */
-/*   Updated: 2024/01/10 15:37:00 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/23 16:12:40 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int	vec_reduce(void *acc, t_vec *src, void (*f) (void *, void *))
 determining order and equality of the two elements 
 passed as parameters and thus sorting the array accordingly 
 from the smallest to the largest element.*/
-
 void	vec_sort(t_vec *src, int (*f)(void *, void *))
 {
 	size_t	i;
@@ -57,6 +56,25 @@ void	vec_sort(t_vec *src, int (*f)(void *, void *))
 		}
 		else
 			i++;
+	}
+}
+
+/*a function vec_int that returns the int element in the vector at the index.*/
+int	vec_int(t_vec *vec, int index)
+{
+	return (*(int *)vec_get(vec, index));
+}
+
+/*a function vec_print that prints out the elements of the vector.*/
+void	vec_print(t_vec *vec)
+{
+	int	i;
+
+	i = 0;
+	while (i < vec->len)
+	{
+		ft_printf("Vector element %d: %d\n", i, vec_int(vec, i));
+		i++;
 	}
 }
 
