@@ -6,7 +6,7 @@
 #    By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/18 15:40:30 by akovalev          #+#    #+#              #
-#    Updated: 2024/01/08 18:20:12 by akovalev         ###   ########.fr        #
+#    Updated: 2024/01/26 14:12:41 by akovalev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,8 @@ SRC = 	ft_isalnum.c \
 		vector.c \
 		vector1.c \
 		vector2.c \
-		vector3.c 
+		vector3.c \
+		ft_atoi_long.c
 		
 NAME = libft.a
 
