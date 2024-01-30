@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 16:37:53 by akovalev          #+#    #+#             */
-/*   Updated: 2024/01/08 14:46:54 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/30 13:19:09 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
               string they tried to create.  These functions force a
               SIGSEGV if the src pointer is not a string.
 
-			  strlcat() appends string src to the end of dst.  It will append at most
+	strlcat() appends string src to the end of dst.  It will append at most
      dstsize - strlen(dst) - 1 characters.  It will then NUL-terminate, unless
      dstsize is 0 or the original dst string was longer than dstsize (in prac-
      tice this should not happen as it means that either dstsize is incorrect
