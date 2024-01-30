@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 14:10:31 by akovalev          #+#    #+#             */
-/*   Updated: 2024/01/26 14:16:17 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/01/30 18:37:56 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ static long	atoi_putnbr(const char *str, int sign, int i)
 		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
+		if (result >= LONG_MAX / 10 && (result > LONG_MAX / 10 \
+		|| (str[i] - '0') > LONG_MAX % 10))
+			return (2147483648);
 		result = (result * 10) + (str[i] - '0');
 		i++;
 	}
