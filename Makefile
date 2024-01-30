@@ -6,7 +6,7 @@
 #    By: akovalev <akovalev@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/18 15:40:30 by akovalev          #+#    #+#              #
-#    Updated: 2024/01/26 14:12:41 by akovalev         ###   ########.fr        #
+#    Updated: 2024/01/30 13:47:51 by akovalev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,24 +79,24 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME) 
 
 %.o: %.c
-	cc $(CFLAGS) -c $< -o $@
+	@cc $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
-	ar -crs $(NAME) $(OBJ)
+	@ar -crs $(NAME) $(OBJ)
 
 clean:
-	rm -f $(OBJ) $(BONUS_OBJ)
+	@rm -f $(OBJ) $(BONUS_OBJ)
 	@rm -rf .bonus
 
 fclean:	clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
 bonus: .bonus
 
 .bonus: $(NAME) $(BONUS_OBJ)
-	ar -crs $(NAME) $(BONUS_OBJ)
+	@ar -crs $(NAME) $(BONUS_OBJ)
 	@touch .bonus
 
 .PHONY: clean fclean all re bonus
