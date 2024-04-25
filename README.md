@@ -1,3 +1,5 @@
+# Libft
+
 This library was my first project of Hive Helsinki curriculum. It includes many functions that replicate existing string and memory manipulation C libraries functions, as well as those related to linked lists. 
 Later on, these more complex features were added:
 - custom implementation of printf
